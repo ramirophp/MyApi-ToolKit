@@ -59,107 +59,127 @@ html([
                 b("Nota*"),br(),
                 "para obtener informacion sobre total de registros",br(),
                 "utiliza la peticion tipo paginacion."
+            ],[
+                'attrs' => [
+                    'class' => 'firstP'
+                ]
             ]),
-            h2("Request Tipo paginacion"),
-            p([
-                "Para crear Una paginacion con los datos disponibles de las etiquetas html :",
-                br(),
-                h6("Inicie desde la pagina 1 para evitar mensajes 404 como respuesta"),
-                h5([
-                    "http://localhost/API_Paginacion/routerSrvPg.php/tags/1",
-                    a("Test it",['attrs'=>[
-                        'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/tags/1'
-                    ]])
+
+            section([
+                h2("Request Tipo paginacion"),
+                p([
+                    "Para crear Una paginacion con los datos disponibles de las etiquetas html :",
+                    br(),
+                    h6("Inicie desde la pagina 1 para evitar mensajes 404 como respuesta"),
+                    h5([
+                        "http://localhost/API_Paginacion/routerSrvPg.php/tags/1",
+                        a("Test it",['attrs'=>[
+                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/tags/1'
+                        ]])
+                    ])
+                ]),
+                p([
+                    "Para crear Una paginacion con los datos disponibles de los atributos de etiquetas html :",
+                    br(),
+                    h6("Inicie desde la pagina 1 para evitar mensajes 404 como respuesta"),
+                    h5([
+                        "http://localhost/API_Paginacion/routerSrvPg.php/attrs/1",
+                        a("Test it",['attrs'=>[
+                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attrs/1'
+                        ]])
+                    ])
                 ])
             ]),
-            p([
-                "Para crear Una paginacion con los datos disponibles de los atributos de etiquetas html :",
-                br(),
-                h6("Inicie desde la pagina 1 para evitar mensajes 404 como respuesta"),
-                h5([
-                    "http://localhost/API_Paginacion/routerSrvPg.php/attrs/1",
-                    a("Test it",['attrs'=>[
-                        'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attrs/1'
-                    ]])
+
+            section([
+                h2("Request a Recursos forma Tradicional"),
+                p([
+                    "Para Obtener todos los datos disponibles de las etiquetas html :",
+                    br(),
+                    h6("Cambie el recurso a tag"),
+                    h5([
+                        "http://localhost/API_Paginacion/routerSrvPg.php/tag",
+                        a("Test it",[
+                            'attrs' => [
+                                'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/tag'
+                            ]
+                        ])
+                    ]),
+                    h6("Si quiere obtener un registro en particular agregue el id"),
+                    h5([
+                        "http://localhost/API_Paginacion/routerSrvPg.php/tag/1", 
+                        a("Test it",[
+                            'attrs' => [
+                                'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/tag/1'
+                            ]
+                        ])
+                    ])
+                ]),
+                p([
+                    "Para Obtener todos los datos disponibles de los atributos de etiquetas html :",br(),
+                    h6("Cambie el recurso a attr"),
+                    h5(["http://localhost/API_Paginacion/routerSrvPg.php/attr", 
+                        a("Test it",[
+                            'attrs' => [
+                                'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attr'
+                            ]
+                        ])
+                    ]),
+                    h6("Si quiere obtener un registro en particular agregue el id"),
+                    h5([
+                        "http://localhost/API_Paginacion/routerSrvPg.php/attr/1",
+                        a("Test it",[
+                            'attrs' => [
+                                'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attr/1'
+                            ]
+                        ])
+                    ])
                 ])
             ]),
-            h2("Request a Recursos forma Tradicional"),
-            p([
-                "Para Obtener todos los datos disponibles de las etiquetas html :",
-                br(),
-                h6("Cambie el recurso a tag"),
+
+            section([
+                h2("Request Tipo POST"),
+                p([
+                    "Peticiones post se hacen a traves",
+                    "de las url con final tag o attr respectivamente.",
+                    br(),br(),
+                    "Utiliza los formularios addTag o addAttr segun lo", 
+                    "necesite, tenga en cuenta que las tags y atributos", 
+                    "que agregue aqui estaran disponibles para la API_Build", 
+                    "de esta caja de herramientas, esto para que pueda", 
+                    "agregar sus web components a la lista de tags validas."
+                ])
+            ]),
+
+            section([
                 h5([
-                    "http://localhost/API_Paginacion/routerSrvPg.php/tag",
-                    a("Test it",[
+                    "Aprenda a crear una caja de herramientas base aqui :",
+                    a("Click",[
                         'attrs' => [
-                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/tag'
+                            'href' => 'https://www.udemy.com/course/curso-de-php-construyendo-mi-primer-caja-de-herramientas/'
                         ]
                     ])
                 ]),
-                h6("Si quiere obtener un registro en particular agregue el id"),
-                h5([
-                    "http://localhost/API_Paginacion/routerSrvPg.php/tag/1", 
-                    a("Test it",[
+
+                h2("How To"),
+
+                section(
+                    video(null,[
                         'attrs' => [
-                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/tag/1'
+                            'src' => "./assets/howTo.mp4",
+                            'width' => "100%",
+                            '!' => 'controls autoplay loop'
                         ]
                     ])
-                ])
-            ]),
-            p([
-                "Para Obtener todos los datos disponibles de los atributos de etiquetas html :",br(),
-                h6("Cambie el recurso a attr"),
-                h5(["http://localhost/API_Paginacion/routerSrvPg.php/attr", 
-                    a("Test it",[
-                        'attrs' => [
-                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attr'
-                        ]
-                    ])
-                ]),
-                h6("Si quiere obtener un registro en particular agregue el id"),
-                h5([
-                    "http://localhost/API_Paginacion/routerSrvPg.php/attr/1",
-                    a("Test it",[
-                        'attrs' => [
-                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attr/1'
-                        ]
-                    ])
-                ])
-            ]),
-            p([
-                "Peticiones post se hacen a traves",
-                "de las url con final tag o attr respectivamente.",
-                br(),br(),
-                "Utiliza los formularios addTag o addAttr segun lo", 
-                "necesite, tenga en cuenta que las tags y atributos", 
-                "que agregue aqui estaran disponibles para la API_Build", 
-                "de esta caja de herramientas, esto para que pueda", 
-                "agregar sus web components a la lista de tags validas."
-            ]),
-            h5([
-                "Aprenda a crear una caja de herramientas base aqui :",
-                a("Click",[
-                    'attrs' => [
-                        'href' => 'https://www.udemy.com/course/curso-de-php-construyendo-mi-primer-caja-de-herramientas/'
-                    ]
-                ])
-            ]),
-            h2("How To"),
-            section(
-                video(null,[
-                    'attrs' => [
-                        'src' => "./assets/howTo.mp4",
-                        'width' => "100%",
-                        '!' => 'controls autoplay loop'
-                    ]
-                ])
-            )
+                )
+            ])
+            
         ]),
         footer([
             "WELCOME TO &copy; futuredeveloper.xyz",
             a(i(null,[
                 'attrs' => [
-                    'class' => 'fas fa-arrow-circle-up'
+                    'class' => 'fas fa-arrow-circle-up upIcon'
                 ]
             ]),['attrs'=>[
                 'href' => '#up'
