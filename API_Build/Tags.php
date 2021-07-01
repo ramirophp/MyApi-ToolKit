@@ -299,6 +299,32 @@ function div ($in = null,array $set = ['attrs' => [],'js' => false]) {
     return $tag->htg();
 }
 
+function label ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','label',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function span ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','span',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
 function video ($in = null,array $set = ['attrs' => [],'js' => false]) {
     $auxJs = false;
     $auxAttrs = [];
