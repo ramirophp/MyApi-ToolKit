@@ -18,6 +18,10 @@ Hi, Just Clone the repository
 in the root directory of your web server.
 </p>
 
+<hr>
+
+<h2>LICENSE</h2>
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
     <img alt="Creative Commons License" 
     style="border-width:0" 
