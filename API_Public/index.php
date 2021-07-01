@@ -19,7 +19,7 @@ html([
         title("API REST")
     ]),
     body([
-        h2("Future Developer",[
+        h1("Future Developer",[
             'attrs' => [
                 'id' => 'up'
             ]
@@ -54,7 +54,7 @@ html([
             ])
         ),
         main([
-            h1("Como Funciona Esta API ?"),
+            h2("Como Funciona Esta API ?"),
             p([
                 b("Nota*"),br(),
                 "para obtener informacion sobre total de registros",br(),
