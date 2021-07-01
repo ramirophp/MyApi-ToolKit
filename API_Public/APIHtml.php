@@ -28,12 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 doctype();
 html([
     head([
-        lin([
+        linx([
             'rel' => 'shortcut icon',
             'type' => 'image/png',
             'href' => './assets/favicon.png'
         ]),
-        lin([
+        linx([
             'rel' => 'stylesheet',
             'type' => 'text/css',
             'href' => '../API_View/editor.css'

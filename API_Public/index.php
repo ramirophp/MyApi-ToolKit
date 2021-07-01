@@ -18,12 +18,48 @@ html([
         ]),
         title("API REST")
     ]),
-    body()
+    body([
+        h2("Future Developer",[
+            'attrs' => [
+                'id' => 'up'
+            ] 
+        ]),
+        headxr(
+            ul([
+                li(a("Tags html pagination API test",[
+                    'attrs' => [
+                        'href' => './pagTags.php'
+                    ]
+                ])),
+                li(a("Attributes html pagination API test",[
+                    'attrs' => [
+                        'href' => './pagAttrs.php'
+                    ]
+                ])),
+                li(a("add tags",[
+                    'attrs' => [
+                        'href' => './addTags.php'
+                    ]
+                ])),
+                li(a("add attrs",[
+                    'attrs' => [
+                        'href' => './addAttrs.php'
+                    ]
+                ])),
+                li(a("Create SomeThing",[
+                    'attrs' => [
+                        'href' => './APIHtml.php'
+                    ]
+                ]))
+            ])
+        )
+    ])
 ],[
     'attrs' => [
         'lang' => 'es'
     ]
 ]);
+/*
 <html>
     <head>
         <link rel="shortcut icon" type="image/png" href="./assets/favicon.png"/>
@@ -122,3 +158,4 @@ html([
         <footer>WELCOME <a href="#up">UP</a></footer>
     </body>
 </html>
+*/
