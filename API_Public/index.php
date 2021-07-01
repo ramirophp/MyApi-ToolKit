@@ -76,6 +76,28 @@ html([
                         'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attrs/1'
                     ]])
                 ])
+            ]),
+            p([
+                "Para Obtener todos los datos disponibles de las etiquetas html :",
+                br(),
+                h6("Cambie el recurso a tag"),
+                h5([
+                    "http://localhost/API_Paginacion/routerSrvPg.php/tag",
+                    a("Test it",[
+                        'attrs' => [
+                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/tag'
+                        ]
+                    ])
+                ]),
+                h6("Si quiere obtener un registro en particular agregue el id"),
+                h5([
+                    "http://localhost/API_Paginacion/routerSrvPg.php/tag/1", 
+                    a("Test it",[
+                        'attrs' => [
+                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/tag/1'
+                        ]
+                    ])
+                ])
             ])
         ]),
         footer([
