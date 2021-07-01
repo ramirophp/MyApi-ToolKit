@@ -56,6 +56,12 @@ html([
         main([
             h1("Como Funciona Esta API ?"),
             p([
+                b("Nota*"),br(),
+                "para obtener informacion sobre total de registros",br(),
+                "utiliza la peticion tipo paginacion."
+            ]),
+            h2("Request Tipo paginacion"),
+            p([
                 "Para crear Una paginacion con los datos disponibles de las etiquetas html :",
                 br(),
                 h6("Inicie desde la pagina 1 para evitar mensajes 404 como respuesta"),
@@ -77,6 +83,7 @@ html([
                     ]])
                 ])
             ]),
+            h2("Request a Recursos forma Tradicional"),
             p([
                 "Para Obtener todos los datos disponibles de las etiquetas html :",
                 br(),
