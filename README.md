@@ -79,6 +79,61 @@ Or just look in the source code which labels you need and which attributes for t
 
 <hr>
 
+<h2>Si no quiere enredarse mucho ...</h2>
+
+<p>
+Si no quiere enredarse mucho asegurese de registrar
+estas etiquetas y atributos en su base de datos despues
+de ejecutar por primera vez la caja de herramientas.
+<h4>RESPETE MINUSCULAS Y MAYUSCULAS</h4>
+</p>
+
+<h2>Lista de Tags y Attrs</h2>
+
+<h3>tags</h3>
+
+<ul>
+    <li>!DOCTYPE</li>
+    <li>html</li>
+    <li>head</li>
+    <li>link</li>
+    <li>title</li>
+    <li>body</li>
+    <li>ul</li>
+    <li>li</li>
+    <li>a</li>
+    <li>h2</li>
+    <li>section</li>
+    <li>form</li>
+    <li>label</li>
+    <li>span</li>
+    <li>input</li>
+    <li>div</li>
+    <li>footer</li>
+    <li>i</li>
+    <li>script</li>
+</ul>
+
+<h3>attrs</h3>
+
+<ul>
+    <li>rel</li>
+    <li>type</li>
+    <li>href</li>
+    <li>id</li>
+    <li>name</li>
+    <li>placeholder</li>
+    <li>for</li>
+    <li>value</li>
+    <li>class</li>
+    <li>src</li>
+    <li>defer</li>
+    <li>crossorigin</li>
+    <li>lang</li>
+</ul>
+
+<hr>
+
 <h2>LICENSE</h2>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
