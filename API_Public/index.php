@@ -125,6 +125,24 @@ html([
                         ]
                     ])
                 ])
+            ]),
+            p([
+                "Peticiones post se hacen a traves",
+                "de las url con final tag o attr respectivamente.",
+                br(),br(),
+                "Utiliza los formularios addTag o addAttr segun lo", 
+                "necesite, tenga en cuenta que las tags y atributos", 
+                "que agregue aqui estaran disponibles para la API_Build", 
+                "de esta caja de herramientas, esto para que pueda", 
+                "agregar sus web components a la lista de tags validas."
+            ]),
+            h5([
+                "Aprenda a crear una caja de herramientas base aqui :",
+                a("Click",[
+                    'attrs' => [
+                        'href' => 'https://www.udemy.com/course/curso-de-php-construyendo-mi-primer-caja-de-herramientas/'
+                    ]
+                ])
             ])
         ]),
         footer([
