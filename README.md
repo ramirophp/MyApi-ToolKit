@@ -56,6 +56,29 @@ sistema gestor de base de datos preferido.
 
 <hr>
 
+<h2>Tags And Attributes You Need To Add Manually</h2>
+
+<p>
+At the beginning the system creates the tables
+and the database necessary for it to work
+however the pages to add more tags
+and attributes also use this same system
+to work.
+</p>
+
+<p>
+So to make sure you have the functionality of
+add tags and attributes go to your system in the API_Public folder
+and replace the php code with html code temporarily while
+add the necessary attributes and tags.
+</p>
+
+<p>
+Or just look in the source code which labels you need and which attributes for the pages of the forms specifically and add that data directly using your preferred database management system.
+</p>
+
+<hr>
+
 <h2>LICENSE</h2>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
