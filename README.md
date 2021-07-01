@@ -21,7 +21,7 @@ in the root directory of your web server.
 <hr>
 
 <h5>
-Aprenda a crear una caja de herramientas base aqui : <br>
+Aprenda a crear una caja de herramientas base aqui : 
 <a href="https://www.udemy.com/course/curso-de-php-construyendo-mi-primer-caja-de-herramientas/">
     Click
 </a>
