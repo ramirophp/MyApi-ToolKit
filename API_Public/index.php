@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php
+
+    require_once '../API_Build/Html.php';
+    require_once '../API_Build/Tags.php';
+
+doctype();
+html([
+    head([
+        lin([
+            'rel' => 'shortcut icon',
+            'type' => 'image/png',
+            'href' => './assets/favicon.png'
+        ]),
+        lin([
+            'rel' => 'stylesheet',
+            'type' => 'text/css',
+            'href' => '../API_View/index.css'
+        ]),
+        title("API REST")
+    ]),
+    body()
+],[
+    'attrs' => [
+        'lang' => 'es'
+    ]
+]);
 <html>
     <head>
         <link rel="shortcut icon" type="image/png" href="./assets/favicon.png"/>
