@@ -143,7 +143,17 @@ html([
                         'href' => 'https://www.udemy.com/course/curso-de-php-construyendo-mi-primer-caja-de-herramientas/'
                     ]
                 ])
-            ])
+            ]),
+            h2("How To"),
+            section(
+                video(null,[
+                    'attrs' => [
+                        'src' => "./assets/howTo.mp4",
+                        'width' => "100%",
+                        '!' => 'controls autoplay loop'
+                    ]
+                ])
+            )
         ]),
         footer([
             "WELCOME TO &copy; futuredeveloper.xyz",
