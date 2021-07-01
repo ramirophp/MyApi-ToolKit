@@ -29,6 +29,33 @@ Aprenda a crear una caja de herramientas base aqui :
 
 <hr>
 
+<h2>Tags Y Atributos que necesita agregar manualmente</h2>
+
+<p>
+En un inicio el sistema crea las tablas<br>
+y la base de datos necesaria para que funcione<br>
+sin embargo las paginas para agregar mas etiquetas<br>
+y atributos tambien utilizan a este mismo sistema<br>
+para funcionar.
+</p>
+
+<p>
+Entonces para asegurarse de que tendra la funcionalidad de<br>
+agregar tags y atributos vaya a su sistema en la carpeta API_Public<br>
+y reemplaze el codigo php por codigo html temporalmente mientras<br>
+agrega los atributos y tags necesarios.
+</p>
+
+<p>
+O bien simplemente observe en el codigo fuente
+que etiquetas necesita y que atributos 
+para las paginas de los formularios especificamente
+y agregue esos datos directamente utilizando su 
+sistema gestor de base de datos preferido.
+</p>
+
+<hr>
+
 <h2>LICENSE</h2>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
