@@ -140,7 +140,7 @@
                             <span style='color:#FFA62F;'>Not</span> 
                             <span style='color:#FFFF00;'>a valid</span> 
                             <span style='color:#FFA62F;'>Attribute add it here 
-                            <a href='./addAttrs.html' style='text-decoration:none;color:#FFFF00;'>
+                            <a href='./addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
                             addAttr ('".$tmpAttrs[$i]."')</a></span> 
                             &#128113;
                         </div>
@@ -167,7 +167,7 @@
                         <span style='color:#FFA62F;'>Not</span> 
                         <span style='color:#FFFF00;'>a valid</span> 
                         <span style='color:#FFA62F;'>Attribute add it here 
-                        <a href='./addAttrs.html' style='text-decoration:none;color:#FFFF00;'>
+                        <a href='./addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
                         addAttr ('".$key."')</a></span> 
                         &#128113;
                     </div>
