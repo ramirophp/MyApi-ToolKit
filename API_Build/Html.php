@@ -64,7 +64,7 @@
                 <span style='color:#FFA62F;'>Valid</span> 
                 <span style='color:#FFFF00;'>tag</span> 
                 <span style='color:#FFA62F;'>Please add it here 
-                <a href='./addTags.html' style='text-decoration:none;color:#FFFF00;'>
+                <a href='./addTags.php' style='text-decoration:none;color:#FFFF00;'>
                 addTag ('".$tag."')</a></span> 
                 &#128113;
             </div>
