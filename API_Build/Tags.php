@@ -52,6 +52,58 @@ function h2 ($in = null,array $set = ['attrs' => [],'js' => false]) {
     return $tag->htg();
 }
 
+function h3 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','h3',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function h4 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','h4',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function h5 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','h5',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function h6 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','h6',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
 function p ($in = null,array $set = ['attrs' => [],'js' => false]) {
     $auxJs = false;
     $auxAttrs = [];

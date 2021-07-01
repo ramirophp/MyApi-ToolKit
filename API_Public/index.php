@@ -53,7 +53,9 @@ html([
                 ]))
             ])
         ),
-        main(""),
+        main([
+            h1("Como Funciona Esta API ?")
+        ]),
         footer([
             "WELCOME TO &copy; futuredeveloper.xyz",
             a(i(null,[
