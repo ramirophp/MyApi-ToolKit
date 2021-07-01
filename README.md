@@ -92,7 +92,7 @@ de ejecutar por primera vez la caja de herramientas.
 
 <h3>tags</h3>
 
-<ul>
+<ol>
     <li>!DOCTYPE</li>
     <li>html</li>
     <li>head</li>
@@ -112,11 +112,11 @@ de ejecutar por primera vez la caja de herramientas.
     <li>footer</li>
     <li>i</li>
     <li>script</li>
-</ul>
+</ol>
 
 <h3>attrs</h3>
 
-<ul>
+<ol>
     <li>rel</li>
     <li>type</li>
     <li>href</li>
@@ -130,7 +130,7 @@ de ejecutar por primera vez la caja de herramientas.
     <li>defer</li>
     <li>crossorigin</li>
     <li>lang</li>
-</ul>
+</ol>
 
 <hr>
 
