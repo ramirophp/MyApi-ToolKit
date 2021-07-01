@@ -105,6 +105,26 @@ html([
                         ]
                     ])
                 ])
+            ]),
+            p([
+                "Para Obtener todos los datos disponibles de los atributos de etiquetas html :",br(),
+                h6("Cambie el recurso a attr"),
+                h5(["http://localhost/API_Paginacion/routerSrvPg.php/attr", 
+                    a("Test it",[
+                        'attrs' => [
+                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attr'
+                        ]
+                    ])
+                ]),
+                h6("Si quiere obtener un registro en particular agregue el id"),
+                h5([
+                    "http://localhost/API_Paginacion/routerSrvPg.php/attr/1",
+                    a("Test it",[
+                        'attrs' => [
+                            'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attr/1'
+                        ]
+                    ])
+                ])
             ])
         ]),
         footer([
