@@ -94,7 +94,7 @@ html([
     'attrs' => [
         'lang' => 'es'
     ]
-]);
+]); 
 
 /*
 <!DOCTYPE html>

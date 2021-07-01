@@ -28,7 +28,7 @@
             $this->tag['type'] = $type;
         } else {
             die("
-            <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;'>
+            <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
                 &#10060; 
                 <span style='color:#FFA62F;'>Set</span> 
                 <span style='color:#FFFF00;'>'oc'</span> 
@@ -57,7 +57,7 @@
         }
         if(!$valid) {
             die("
-            <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;'>
+            <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
                 &#10060; 
                 <span style='color:#FFA62F;'>Set</span> 
                 <span style='color:#FFFF00;'>a</span> 
@@ -95,7 +95,7 @@
             }
             if(strpos($this->tag['content'] , 'script') !== false){
                 die("
-                <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;'>
+                <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
                     &#10060; 
                     <span style='color:#FFA62F;'>Js</span> 
                     <span style='color:#FFFF00;'>is</span> 
@@ -133,7 +133,7 @@
                         $this->tag['attrs'] .= ' ' . $tmpAttrs[$i];
                     }else{
                         die("
-                        <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;'>
+                        <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
                             &#10060; 
                             <span style='color:#FFA62F;'>".$tmpAttrs[$i]."</span> 
                             <span style='color:#FFFF00;'>is</span> 
@@ -160,7 +160,7 @@
                     $this->tag['attrs'] .= ' '.$key.'="'.$value.'"';
                 }else{
                     die("
-                    <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;'>
+                    <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
                         &#10060; 
                         <span style='color:#FFA62F;'>".$key."</span> 
                         <span style='color:#FFFF00;'>is</span> 

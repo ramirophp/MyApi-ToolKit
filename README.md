@@ -117,6 +117,7 @@ de ejecutar por primera vez la caja de herramientas.
 <h3>attrs</h3>
 
 <ol>
+    <li>html</li>
     <li>rel</li>
     <li>type</li>
     <li>href</li>
