@@ -65,6 +65,17 @@ html([
                         'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/tags/1'
                     ]])
                 ])
+            ]),
+            p([
+                "Para crear Una paginacion con los datos disponibles de los atributos de etiquetas html :",
+                br(),
+                h6("Inicie desde la pagina 1 para evitar mensajes 404 como respuesta"),
+                h5([
+                    "http://localhost/API_Paginacion/routerSrvPg.php/attrs/1",
+                    a("Test it",['attrs'=>[
+                        'href' => 'http://localhost/API_Paginacion/routerSrvPg.php/attrs/1'
+                    ]])
+                ])
             ])
         ]),
         footer([
