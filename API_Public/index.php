@@ -6,12 +6,12 @@
 doctype();
 html([
     head([
-        lin([
+        linx([
             'rel' => 'shortcut icon',
             'type' => 'image/png',
             'href' => './assets/favicon.png'
         ]),
-        lin([
+        linx([
             'rel' => 'stylesheet',
             'type' => 'text/css',
             'href' => '../API_View/index.css'
@@ -22,7 +22,7 @@ html([
         h2("Future Developer",[
             'attrs' => [
                 'id' => 'up'
-            ] 
+            ]
         ]),
         headxr(
             ul([
@@ -52,14 +52,34 @@ html([
                     ]
                 ]))
             ])
-        )
-    ])
+        ),
+        main(""),
+        footer([
+            "WELCOME TO &copy; futuredeveloper.xyz",
+            a(i(null,[
+                'attrs' => [
+                    'class' => 'fas fa-arrow-circle-up'
+                ]
+            ]),['attrs'=>[
+                'href' => '#up'
+            ]])
+        ]),
+        script(null,[
+            'attrs' => [
+                'src' => 'https://kit.fontawesome.com/60163d706b.js',
+                '!' => 'defer',
+                'crossorigin' => 'anonymous'
+            ]
+        ])
+    ],['js'=>true])
 ],[
     'attrs' => [
         'lang' => 'es'
-    ]
+    ],
+    'js' => true
 ]);
-/*
+
+/* HTML CODE WITHOUT USING THE API_Build
 <html>
     <head>
         <link rel="shortcut icon" type="image/png" href="./assets/favicon.png"/>
