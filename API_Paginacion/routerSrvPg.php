@@ -105,6 +105,30 @@ if ( preg_match('/^[\/][a-z]{1,10}([\/][0-9]{1,3})?$/',$url) ) {
          */
         try {
             require_once './pdo.php';
+            #########################################
+
+            if($llenarTablas) {
+
+                $tags = ['!DOCTYPE','html','head','link','title','body','ul','li','a','h2','section','form',
+                'label','span','input','div','footer','i','script'];
+                $attrs = ['html','rel','type','href','id','name','placeholder',
+                'for','value','class','src','defer','crossorigin','lang'];
+            
+                for($i = 0; $i < count($tags); $i++){
+                    $mysql = $pdo->prepare("INSERT INTO tags(name) VALUES('".$tags[$i]."')");
+                    $mysql->execute();
+                }
+            
+                for($i = 0; $i < count($tags); $i++){
+                    $mysql = $pdo->prepare("INSERT INTO attrs(name) VALUES('".$attrs[$i]."')");
+                    $mysql->execute();
+                }
+
+                $llenarTablas = false;
+
+            }
+
+            #########################################
             /**
              * Le pasamos los datos de conexion y
              * si todo sale bien , entonces 

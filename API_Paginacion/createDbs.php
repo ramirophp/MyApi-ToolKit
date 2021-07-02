@@ -1,5 +1,7 @@
 <?php
 
+$llenarTablas = false;
+
 $link = mysqli_connect('localhost', 'root', '');
 if (!$link) {
     echo json_encode(['Could not connect: ' => mysqli_error()]);
@@ -31,7 +33,7 @@ if (!$db_selected) {
             name varchar(25) NOT NULL UNIQUE,
             PRIMARY KEY  (id)
             )";
-            $result = mysqli_query($link, $query);
+            mysqli_query($link, $query);
         }
         /**
          * hago el mismo proceso pero para la tabla
@@ -45,8 +47,26 @@ if (!$db_selected) {
             name varchar(25) NOT NULL UNIQUE,
             PRIMARY KEY  (id)
             )";
-            $result = mysqli_query($link, $query);
+            mysqli_query($link, $query);
         }
+
+        /**
+         * igual para la tabla users
+         */
+
+        $query = "SELECT id FROM users";
+        $result = mysqli_query($link, $query);
+        if(empty($result)) {
+            $query = "CREATE TABLE users (
+            id int(11) AUTO_INCREMENT,
+            fullname varchar(50) NOT NULL,
+            username varchar(50) NOT NULL UNIQUE,
+            password varchar(200) NOT NULL,
+            PRIMARY KEY  (id)
+            )";
+            mysqli_query($link, $query);
+        }
+        $llenarTablas = true;
     } else {
         echo json_encode(['Error creating database: ' => mysqli_error()]);
     }

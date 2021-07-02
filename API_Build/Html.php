@@ -48,6 +48,9 @@
         }
         $valid = false;
         $tags = $this->get('http://localhost/API_Paginacion/routerSrvPg.php/tag');
+        if($tags === null) {
+            header('Location: ../index.php');
+        }
         for ($i = 0; $i < count($tags['tags']); $i++) {
             if ($tag === $tags['tags'][$i]['name']) {
                 $this->tag['tag'] = $tags['tags'][$i]['name'];
@@ -64,7 +67,7 @@
                 <span style='color:#FFA62F;'>Valid</span> 
                 <span style='color:#FFFF00;'>tag</span> 
                 <span style='color:#FFA62F;'>Please add it here 
-                <a href='./addTags.php' style='text-decoration:none;color:#FFFF00;'>
+                <a href='http://localhost/API_Public/addTags.php' style='text-decoration:none;color:#FFFF00;'>
                 addTag ('".$tag."')</a></span> 
                 &#128113;
             </div>
@@ -140,7 +143,7 @@
                             <span style='color:#FFA62F;'>Not</span> 
                             <span style='color:#FFFF00;'>a valid</span> 
                             <span style='color:#FFA62F;'>Attribute add it here 
-                            <a href='./addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
+                            <a href='http://localhost/API_Public/addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
                             addAttr ('".$tmpAttrs[$i]."')</a></span> 
                             &#128113;
                         </div>
@@ -167,7 +170,7 @@
                         <span style='color:#FFA62F;'>Not</span> 
                         <span style='color:#FFFF00;'>a valid</span> 
                         <span style='color:#FFA62F;'>Attribute add it here 
-                        <a href='./addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
+                        <a href='http://localhost/API_Public/addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
                         addAttr ('".$key."')</a></span> 
                         &#128113;
                     </div>

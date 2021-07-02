@@ -22,7 +22,7 @@ html([
         ul(
             li(a("home",[
                 'attrs' => [
-                    'href' => './index.php'
+                    'href' => '../index.php'
                 ]
             ]))
         ),
