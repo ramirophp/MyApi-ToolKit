@@ -11,7 +11,7 @@ html([
             'type' => 'image/png',
             'href' => '../API_Public/assets/favicon.png'
         ]),
-        title("Sign Up")
+        title("Log In")
     ]),
     body([
         ul([
@@ -20,33 +20,19 @@ html([
                     'href' => '../index.php'
                 ]
             ])),
-            li(a("login",[
+            li(a("signup",[
                 'attrs' => [
-                    'href' => './logIn.php'
+                    'href' => './signUp.php'
                 ]
             ]))
         ]),
-        h2("Sign Up",[
+        h2("Log In",[
             'attrs' => [
                 'id' => 'up'
             ]
         ]),
         section(
             form([
-                label([
-                    span("Full Name : "), 
-                    input([
-                        'type' => "text",
-                        'name' => "name",
-                        'id' => "name",
-                        'placeholder' => "your full name please: ",
-                        '!' => 'required'
-                    ])
-                ],[
-                    'attrs' => [
-                        'for' => 'name'
-                    ]
-                ]),
                 label([
                     span("User Name : "), 
                     input([
@@ -75,20 +61,6 @@ html([
                         'for' => 'password'
                     ]
                 ]),
-                label([
-                    span("Confirm Password : "), 
-                    input([
-                        'type' => "password",
-                        'name' => "cpassword",
-                        'id' => "cpassword",
-                        'placeholder' => "Confirm your Password please: ",
-                        '!' => 'required'
-                    ])
-                ],[
-                    'attrs' => [
-                        'for' => 'cpassword'
-                    ]
-                ]),
                 div(null,[
                     'attrs' => [
                         'id' => 'errors'
@@ -96,7 +68,7 @@ html([
                 ]),
                 input([
                     'type' => "submit",
-                    'value' => "sign up"
+                    'value' => "log in"
                 ])
             ],[
                 'attrs' => [
