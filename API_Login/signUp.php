@@ -1,7 +1,12 @@
-<?php
+<?php session_start();
+
+if(isset($_SESSION['user'])) {
+    header('Location: ../index.php');
+}
 
 require_once '../API_Build/Html.php';
 require_once '../API_Build/Tags.php';
+require_once './procesaReg.php';
 
 doctype();
 html([
@@ -44,8 +49,8 @@ html([
                         'type' => "text",
                         'name' => "name",
                         'id' => "name",
-                        'placeholder' => "your full name please: ",
-                        '!' => 'required'
+                        'placeholder' => "your full name please: "/*,
+                        '!' => 'required'*/
                     ])
                 ],[
                     'attrs' => [
@@ -58,8 +63,8 @@ html([
                         'type' => "text",
                         'name' => "usrname",
                         'id' => "usrname",
-                        'placeholder' => "your user name please: ",
-                        '!' => 'required'
+                        'placeholder' => "your user name please: "/*,
+                        '!' => 'required'*/
                     ])
                 ],[
                     'attrs' => [
@@ -72,8 +77,8 @@ html([
                         'type' => "password",
                         'name' => "password",
                         'id' => "password",
-                        'placeholder' => "your Password please: ",
-                        '!' => 'required'
+                        'placeholder' => "your Password please: "/*,
+                        '!' => 'required'*/
                     ])
                 ],[
                     'attrs' => [
@@ -86,15 +91,19 @@ html([
                         'type' => "password",
                         'name' => "cpassword",
                         'id' => "cpassword",
-                        'placeholder' => "Confirm your Password please: ",
-                        '!' => 'required'
+                        'placeholder' => "Confirm your Password please: "/*,
+                        '!' => 'required'*/
                     ])
                 ],[
                     'attrs' => [
                         'for' => 'cpassword'
                     ]
                 ]),
-                div(null,[
+                div(ul($errors,[
+                    'attrs' => [
+                        'title' => 'Errors Box'
+                    ]
+                ]),[
                     'attrs' => [
                         'id' => 'errors'
                     ]

@@ -16,7 +16,7 @@ h2 {
 }
 
 form {
-    width: 60%;
+    width: 100%;
     padding: 35px;
     border: 1px solid #FFA62F;
     height: 81vh;
@@ -33,7 +33,7 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     background-color: #FFFF00;
 }
 
@@ -43,7 +43,7 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-    width: 15%;
+    width: 35%;
     text-align: center;
     padding: 5px;
     border: none;
@@ -108,4 +108,18 @@ footer .upIcon {
 
 footer .upIcon:hover{
     color: #FFA62F;
+}
+
+#errors {
+    border: 2px dashed rgba(209, 77, 25, 0.808);
+}
+
+#errors:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+    form {
+        width: 60%;
+    }
 }
