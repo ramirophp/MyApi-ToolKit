@@ -11,6 +11,11 @@ html([
             'type' => 'image/png',
             'href' => '../API_Public/assets/favicon.png'
         ]),
+        linx([
+            'rel' => 'stylesheet',
+            'type' => 'text/css',
+            'href' => '../API_View/loginSignup.css'
+        ]),
         title("Log In")
     ]),
     body([
