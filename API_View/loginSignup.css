@@ -42,6 +42,26 @@ input[type="password"] {
     width: 80%;
 }
 
+input[type="submit"] {
+    width: 15%;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    background-color: #306754;
+    color: #FFFF00;
+    transition: .5s;
+}
+
+form input[type='submit']:hover {
+    cursor: pointer;
+    background-color: #FFFF00;
+    color: #306754;
+}
+
+::placeholder {
+    color: #111;
+}
+
 ul {
     padding: 5px;
     list-style: none;
