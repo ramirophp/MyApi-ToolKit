@@ -110,9 +110,10 @@ if ( preg_match('/^[\/][a-z]{1,10}([\/][0-9]{1,3})?$/',$url) ) {
             if($llenarTablas) {
 
                 $tags = ['!DOCTYPE','html','head','link','title','body','ul','li','a','h2','section','form',
-                'label','span','input','div','footer','i','script'];
+                'label','span','input','div','footer','i','script','br'];
                 $attrs = ['html','rel','type','href','id','name','placeholder',
-                'for','value','class','src','defer','crossorigin','lang'];
+                'for','value','class','src','defer','crossorigin','lang','title',
+                'action','method'];
             
                 for($i = 0; $i < count($tags); $i++){
                     $mysql = $pdo->prepare("INSERT INTO tags(name) VALUES('".$tags[$i]."')");

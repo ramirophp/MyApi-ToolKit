@@ -52,12 +52,29 @@ html([
                 'class' => 'paginacion'
             ]
         ]),
+        footer([
+            "WELCOME TO &copy;  My Web Site",
+            a(i(null,[
+                'attrs' => [
+                    'class' => 'fas fa-arrow-circle-up upIcon'
+                ]
+            ]),['attrs'=>[
+                'href' => '#up'
+            ]])
+        ]),
         script(null,[
             'attrs' => [
                 'src' => '../API_View/request_page.js',
             ]
         ]),
-        script("request_page('tags',1);")
+        script("request_page('tags',1);"),
+        script(null,[
+            'attrs' => [
+                'src' => 'https://kit.fontawesome.com/60163d706b.js',
+                '!' => 'defer',
+                'crossorigin' => 'anonymous'
+            ]
+        ])
     ],[
         'js' => true
     ])

@@ -68,7 +68,7 @@ html([
             ]
         ]),
         footer([
-            "WELCOME TO &copy; futuredeveloper.xyz",
+            "WELCOME TO &copy; My Web Site",
             a(i(null,[
                 'attrs' => [
                     'class' => 'fas fa-arrow-circle-up upIcon'
