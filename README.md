@@ -121,7 +121,9 @@ llaves ssh , xampp y, archivos php </h2>
 <ul>
 <li>Consigue una computadora con windows 11 instalado.</li>
 <li>Consigue estar en un lugar con conexion a internet de calidad.</li>
-<li>Ingresa a esta url : <a href="https://piezas.xyz">MyApi-ToolKit</a></li>
+<h6>Visite la pagina de piezas.xyz para probar y obtener los recursos necesarios para 
+inicial de ya en el mundo de la creacion de codigo en php.</h6>
+<li>Ingresa a esta url : <a href="https://piezas.xyz">MyApi-ToolKit (piezas.xyz)</a></li>
 <li>Siga las instrucciones para descargar el codigo fuente</li>
 <li>Siga las instrucciones para aprender el funcionamiento base</li>
 <li>Utilice el sistema de paginas para complementar sus proyectos personales</li>
@@ -131,3 +133,19 @@ llaves ssh , xampp y, archivos php </h2>
 <li>Solicita acceso al codigo fuente</li>
 <li>Trabajemos juntos =)</li>
 </ul>
+
+<h2>Que Pienso yo</h2>
+
+<p>
+incruste una tipo historia , que explica lo que pienso hacerca de este proyecto y mi vision empresarial , mi mision es crear herramientas experimentales , para acelerar el inicio de aprendizaje y acortar la curva de aprendizaje de cualquier lenguaje de programacion.
+
+<p>
+esto se logra dejando un codigo base en php bien programado y estrucrado , dotado de herramientas que nos permitan manipular registros de una base de datos de una forma basica y sofisticada
+</p>
+
+<p>
+utilizando el editor primitivo que encontraras en la pagina de 
+piezas.xyz
+</p>
+
+</p>
