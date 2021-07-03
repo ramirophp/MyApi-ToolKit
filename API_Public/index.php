@@ -50,6 +50,11 @@ html([
                     'attrs' => [
                         'href' => './APIHtml.php'
                     ]
+                ])),
+                li(a("LogOut",[
+                    'attrs' => [
+                        'href' => './close.php'
+                    ]
                 ]))
             ])
         ),
