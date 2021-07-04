@@ -60,16 +60,16 @@ Representar de forma grafica un conjunto de ideas escritas en el lenguaje de pro
     existen herramientas que nos ayudan
     a completar tareas facilmente.
     
-    <br><br>Por ejemplo : <br>
+    Por ejemplo :
 
-    <h3>traduciendo</h3> 
+    traduciendo
     lo que le escribamos a un archivo de extencion .php
     a lenguaje maquina , el lenguaje de programacion
     php realiza una secuencia de procesos que si quisiera
     podria estudiar su comportamiento y llegar al nivel 
     que le permita escribir su propio lenguaje de programacion o
     estudiar otro lenguaje de programacion y escribir codigo
-    en esa tecnologia que a ti paresca la mejor para ti.
+    en esa tecnologia que tu consideres sea la mejor opcion para ti.
     <h6>
     Lo anterior es solo lo que yo pienso porque realmente no
     se como funciona el lenguaje de php por dentro siendo honesto
