@@ -25,7 +25,7 @@ function request_page (recurso,page) {
      */
     var peticion = new XMLHttpRequest();
     //preparo la peticion
-    peticion.open('GET',`http://localhost/API_Paginacion/routerSrvPg.php/${recurso}/${page}`);
+    peticion.open('GET',`https://api.piezas.xyz/API/router.php/${recurso}/${page}`);
 
     //en el metodo load recibo los datos y construyo la vista
     peticion.onload = function() {

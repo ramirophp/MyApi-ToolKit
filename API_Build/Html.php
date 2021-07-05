@@ -47,7 +47,7 @@
             $tag = '!DOCTYPE';
         }
         $valid = false;
-        $tags = $this->get('http://localhost/API_Paginacion/routerSrvPg.php/tag');
+        $tags = $this->get('https://api.piezas.xyz/API/router.php/tag');
         if($tags === null) {
             header('Location: ../index.php');
         }
@@ -116,7 +116,7 @@
     }
 
     private function attrs (array $attrs) {
-        $validAttrs = $this->get('http://localhost/API_Paginacion/routerSrvPg.php/attr');
+        $validAttrs = $this->get('https://api.piezas.xyz/API/router.php/attr');
         foreach ($attrs as $key => $value) {
             $key = htmlspecialchars($key);
             $value = htmlspecialchars($value);
