@@ -41,3 +41,12 @@ This work is licensed under a
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
     Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
 </a>
+
+<p>
+5/7/2021 , Es momento de un nuevo inicio<br>
+Este es uno de los proyectos que mas me ha gustado ,<br>
+ahora que ya tengo la api en linea me centrare en los metodos get<br>
+que tengo disponibles e iniciare a crear mi caja de herramientas <br>
+partiendo con esta api basica , entonces es hora de crear una nueva rama<br>
+De esta rama main tomare la carpeta API_Build solamente =)
+</p>
