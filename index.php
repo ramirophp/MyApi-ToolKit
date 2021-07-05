@@ -1,9 +1,4 @@
 <?php
 
-session_start();
-
-if (isset($_SESSION['user'])) {
-    header('Location: ./API_Public/');
-} else {
-    header('Location: ./API_Login/signUp.php');
-}
+require_once('./API_Build/Html.php');
+require_once('./API_Build/Tags.php');
