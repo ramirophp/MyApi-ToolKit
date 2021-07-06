@@ -12,7 +12,12 @@ html([
         headxr([
             h1('ETIQUETAS HTML COMO FUNCIONES EN PHP (html tags as php functions)'),
             h2('Api urls'),
-            ul(li(a('api v1',['attrs'=>['href'=>'./v1.php']])))
+            ul([
+                li(a('api v1',['attrs'=>['href'=>'./info.php']])),
+                li(a('aprender m&aacute;s',['attrs'=>[
+                    'href'=>'https://www.udemy.com/course/curso-de-php-construyendo-mi-primer-caja-de-herramientas/'
+                ]]))
+            ])
         ]),
         main([
             h2('Argumentos por funcion del tipo apertura y cierre'),
