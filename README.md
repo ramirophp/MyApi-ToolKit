@@ -72,6 +72,22 @@ Dividida Por paginas (page 1-n)</h3>
 
 <h4>http://localhost/api/v1.php/attrs/1</h4>
 
+<h3>Lista de etiquetas</h3>
+
+<h4>http://localhost/api/v1.php/tag</h4>
+
+<h3>Obtener una etiqueta por id (1-n)</h3>
+
+<h4>http://localhost/api/v1.php/tag/1</h4>
+
+<h3>Lista de atributos</h3>
+
+<h4>http://localhost/api/v1.php/attr</h4>
+
+<h3>Obtener un atributo por id (1-n)</h3>
+
+<h4>http://localhost/api/v1.php/attr/1</h4>
+
 <hr>
 
 <h2>LICENSE</h2>
