@@ -279,6 +279,20 @@ function ul ($in = null,array $set = ['attrs' => [],'js' => false]) {
     return $tag->htg();
 }
 
+function ol ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','ol',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
 function li ($in = null,array $set = ['attrs' => [],'js' => false]) {
     ajuste_1($in);
     $auxJs = false;

@@ -60,6 +60,20 @@ $set = [
 
 <hr>
 
+<h2>Api urls</h2>
+
+<h3>Lista de etiquetas e informacion adicional
+Dividida Por paginas (page 1-n)</h3>
+
+<h4>http://localhost/api/v1.php/tags/1</h4>
+
+<h3>Lista de Atributos e informacion adicional
+Dividida Por paginas (page 1-n)</h3>
+
+<h4>http://localhost/api/v1.php/attrs/1</h4>
+
+<hr>
+
 <h2>LICENSE</h2>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
