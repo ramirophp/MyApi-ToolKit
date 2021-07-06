@@ -29,6 +29,11 @@ html([
             pre('
             $in puede ser $in = ""; o $in = \'\';
             o tambien $in = [\'\',"",\'etc...\'];
+            solo dos niveles de arrays asi :
+            [[\'string\'],\'string\',[\'string\']]
+            tres niveles ya no sera procesado por ejemplo:
+            [\'string\',[\'string\',[\'array\']]]
+            el tercer array se mostrara como Array
             '),
             h3('Estructura de $set'),
             pre('
