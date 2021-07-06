@@ -1,6 +1,12 @@
 <?php
 
-require_once('./API_Build/Html.php');
-require_once('./API_Build/Tags.php');
+require_once('./ta/Html.php');
+require_once('./ta/Tags.php');
 
-html();
+doctype();
+html([
+    'js' => false,
+    'attrs' => [
+        '!' => 'hello'
+    ]
+]);

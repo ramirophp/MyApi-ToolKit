@@ -1,6 +1,38 @@
 <?php
 
+
+function ajuste_1 ($var) {
+    if($var != null && is_array($var)) {
+        if(array_key_exists('js',$var) || array_key_exists('attrs',$var)) {
+            die(html([
+                head([
+                    title('Error en Parametros')
+                ]),
+                body([
+                    h1('Argumentos en la posicion incorrecta'),
+                    p('Si quiere mantener la etiqueta vacia ,
+                    agregue la palabra null como primer argumento'),
+                    p('Si no necesita tampoco atributos,
+                    simplemente no le pase argumentos a 
+                    la funcion.')
+                ])
+            ],[
+                'js' => false,
+                'attrs' => [
+                    'lang' => 'es'
+                ]
+            ]));
+        }
+    }
+}
+
+function doctype () {
+    $tag = new Html('sc','doctype',['!'=>'html']);
+    echo $tag->htg();
+}
+
 function html ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -13,7 +45,18 @@ function html ($in = null,array $set = ['attrs' => [],'js' => false]) {
     echo $tag->htg();
 }
 
+function head ($in = null) {
+    $tag = new Html('oc','head',$in);
+    return $tag->htg();
+}
+
+function title ($in = null) {
+    $tag = new Html('oc','title',$in);
+    return $tag->htg();
+}
+
 function body ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -26,7 +69,22 @@ function body ($in = null,array $set = ['attrs' => [],'js' => false]) {
     return $tag->htg();
 }
 
+function div ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','div',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
 function h1 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -39,7 +97,22 @@ function h1 ($in = null,array $set = ['attrs' => [],'js' => false]) {
     return $tag->htg();
 }
 
+function p ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','p',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
 function h2 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -53,6 +126,7 @@ function h2 ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function h3 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -66,6 +140,7 @@ function h3 ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function h4 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -79,6 +154,7 @@ function h4 ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function h5 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -92,6 +168,7 @@ function h5 ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function h6 ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -104,20 +181,8 @@ function h6 ($in = null,array $set = ['attrs' => [],'js' => false]) {
     return $tag->htg();
 }
 
-function p ($in = null,array $set = ['attrs' => [],'js' => false]) {
-    $auxJs = false;
-    $auxAttrs = [];
-    if(array_key_exists('attrs',$set)) {
-        $auxAttrs = $set['attrs'];
-    }
-    if(array_key_exists('js',$set)) {
-        $auxJs = $set['js'];
-    }
-    $tag = new Html('oc','p',$in,$auxAttrs,$auxJs);
-    return $tag->htg();
-}
-
 function a ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -131,6 +196,7 @@ function a ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function footer ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -144,6 +210,7 @@ function footer ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function pre ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -157,6 +224,7 @@ function pre ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function form ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -170,6 +238,7 @@ function form ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function textarea ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -183,6 +252,7 @@ function textarea ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function headxr ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -196,6 +266,7 @@ function headxr ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function ul ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -209,6 +280,7 @@ function ul ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function li ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -222,6 +294,7 @@ function li ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function main ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -235,6 +308,7 @@ function main ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function script ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -248,6 +322,7 @@ function script ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function i ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -261,6 +336,7 @@ function i ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function b ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -274,6 +350,7 @@ function b ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function section ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -286,20 +363,8 @@ function section ($in = null,array $set = ['attrs' => [],'js' => false]) {
     return $tag->htg();
 }
 
-function div ($in = null,array $set = ['attrs' => [],'js' => false]) {
-    $auxJs = false;
-    $auxAttrs = [];
-    if(array_key_exists('attrs',$set)) {
-        $auxAttrs = $set['attrs'];
-    }
-    if(array_key_exists('js',$set)) {
-        $auxJs = $set['js'];
-    }
-    $tag = new Html('oc','div',$in,$auxAttrs,$auxJs);
-    return $tag->htg();
-}
-
 function label ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -313,6 +378,7 @@ function label ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function span ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -326,6 +392,7 @@ function span ($in = null,array $set = ['attrs' => [],'js' => false]) {
 }
 
 function video ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
     $auxJs = false;
     $auxAttrs = [];
     if(array_key_exists('attrs',$set)) {
@@ -335,16 +402,6 @@ function video ($in = null,array $set = ['attrs' => [],'js' => false]) {
         $auxJs = $set['js'];
     }
     $tag = new Html('oc','video',$in,$auxAttrs,$auxJs);
-    return $tag->htg();
-}
-
-function head ($in = null) {
-    $tag = new Html('oc','head',$in);
-    return $tag->htg();
-}
-
-function title ($in = null) {
-    $tag = new Html('oc','title',$in);
     return $tag->htg();
 }
 
@@ -366,11 +423,6 @@ function linx ($set = []) {
 function hr ($set = []) {
     $tag = new Html('sc','hr',$set);
     return $tag->htg();
-}
-
-function doctype () {
-    $tag = new Html('sc','doctype',['!'=>'html']);
-    echo $tag->htg();
 }
 
 function br () {

@@ -27,17 +27,19 @@
             sc = self closing tag*/
             $this->tag['type'] = $type;
         } else {
-            die("
-            <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
-                &#10060; 
-                <span style='color:#FFA62F;'>Set</span> 
-                <span style='color:#FFFF00;'>'oc'</span> 
-                <span style='color:#FFA62F;'>OR</span> 
-                <span style='color:#FFFF00;'>'sc'</span> 
-                <span style='color:#FFA62F;'>Please</span> 
-                &#128113;
-            </div>
-            ");
+            $div = new self('oc','div',[
+                'defina el tipo -oc || sc-',
+                ' de etiqueta por favor'
+            ]);
+            $title = new self('oc','title','Erorr 404');
+            $head = new self('oc','head',$title->htg());
+            $body = new self('oc','body',$div->htg());
+            $doctype = new self('sc','!DOCTYPE',['!'=>'html']);
+            $html = new self('oc','html',[
+                $head->htg(),
+                $body->htg()
+            ],['lang'=>'es']);
+            die($doctype->htg().$html->htg());
         }
     }
 
@@ -47,10 +49,14 @@
             $tag = '!DOCTYPE';
         }
         $valid = false;
-        $tags = $this->get('https://api.piezas.xyz/API/router.php/tag');
-        if($tags === null) {
-            header('Location: ../index.php');
+        $tags = $this->get('http://localhost/api/v1.php/tag');
+
+        $mensaje = array_key_exists('mensaje',$tags);
+        
+        if($mensaje) {
+            die('Rellene la tabla tags por favor.');
         }
+        
         for ($i = 0; $i < count($tags['tags']); $i++) {
             if ($tag === $tags['tags'][$i]['name']) {
                 $this->tag['tag'] = $tags['tags'][$i]['name'];
@@ -59,19 +65,20 @@
             }
         }
         if(!$valid) {
-            die("
-            <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
-                &#10060; 
-                <span style='color:#FFA62F;'>Set</span> 
-                <span style='color:#FFFF00;'>a</span> 
-                <span style='color:#FFA62F;'>Valid</span> 
-                <span style='color:#FFFF00;'>tag</span> 
-                <span style='color:#FFA62F;'>Please add it here 
-                <a href='http://localhost/API_Public/addTags.php' style='text-decoration:none;color:#FFFF00;'>
-                addTag ('".$tag."')</a></span> 
-                &#128113;
-            </div>
-            ");
+            $div = new self('oc','div',[
+                'La etiqueta -',
+                $tag,
+                '- no existe'
+            ]);
+            $title = new self('oc','title','Erorr 404');
+            $head = new self('oc','head',$title->htg());
+            $body = new self('oc','body',$div->htg());
+            $doctype = new self('sc','!DOCTYPE',['!'=>'html']);
+            $html = new self('oc','html',[
+                $head->htg(),
+                $body->htg()
+            ],['lang'=>'es']);
+            die($doctype->htg().$html->htg());
         }
     }
 
@@ -116,7 +123,13 @@
     }
 
     private function attrs (array $attrs) {
-        $validAttrs = $this->get('https://api.piezas.xyz/API/router.php/attr');
+        $validAttrs = $this->get('http://localhost/api/v1.php/attr');
+        $mensaje = array_key_exists('mensaje',$validAttrs);
+        
+        if($mensaje) {
+            die('Rellene la tabla attrs por favor.');
+        }
+
         foreach ($attrs as $key => $value) {
             $key = htmlspecialchars($key);
             $value = htmlspecialchars($value);
@@ -135,19 +148,20 @@
                     if($valid) {
                         $this->tag['attrs'] .= ' ' . $tmpAttrs[$i];
                     }else{
-                        die("
-                        <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
-                            &#10060; 
-                            <span style='color:#FFA62F;'>".$tmpAttrs[$i]."</span> 
-                            <span style='color:#FFFF00;'>is</span> 
-                            <span style='color:#FFA62F;'>Not</span> 
-                            <span style='color:#FFFF00;'>a valid</span> 
-                            <span style='color:#FFA62F;'>Attribute add it here 
-                            <a href='http://localhost/API_Public/addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
-                            addAttr ('".$tmpAttrs[$i]."')</a></span> 
-                            &#128113;
-                        </div>
-                        ");
+                        $div = new self('oc','div',[
+                            'El atributo -',
+                            $tmpAttrs[$i],
+                            '- no existe'
+                        ]);
+                        $title = new self('oc','title','Erorr 404');
+                        $head = new self('oc','head',$title->htg());
+                        $body = new self('oc','body',$div->htg());
+                        $doctype = new self('sc','!DOCTYPE',['!'=>'html']);
+                        $html = new self('oc','html',[
+                            $head->htg(),
+                            $body->htg()
+                        ],['lang'=>'es']);
+                        die($doctype->htg().$html->htg());
                     }
                 }
             } else {
@@ -162,19 +176,20 @@
                 if($valid) {
                     $this->tag['attrs'] .= ' '.$key.'="'.$value.'"';
                 }else{
-                    die("
-                    <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
-                        &#10060; 
-                        <span style='color:#FFA62F;'>".$key."</span> 
-                        <span style='color:#FFFF00;'>is</span> 
-                        <span style='color:#FFA62F;'>Not</span> 
-                        <span style='color:#FFFF00;'>a valid</span> 
-                        <span style='color:#FFA62F;'>Attribute add it here 
-                        <a href='http://localhost/API_Public/addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
-                        addAttr ('".$key."')</a></span> 
-                        &#128113;
-                    </div>
-                    ");
+                    $div = new self('oc','div',[
+                        'El atributo -',
+                        $key,
+                        '- no existe'
+                    ]);
+                    $title = new self('oc','title','Erorr 404');
+                    $head = new self('oc','head',$title->htg());
+                    $body = new self('oc','body',$div->htg());
+                    $doctype = new self('sc','!DOCTYPE',['!'=>'html']);
+                    $html = new self('oc','html',[
+                        $head->htg(),
+                        $body->htg()
+                    ],['lang'=>'es']);
+                    die($doctype->htg().$html->htg());
                 }
             }
         }
