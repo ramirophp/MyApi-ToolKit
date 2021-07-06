@@ -419,6 +419,104 @@ function video ($in = null,array $set = ['attrs' => [],'js' => false]) {
     return $tag->htg();
 }
 
+function table ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','table',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function thead ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','thead',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function tbody ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','tbody',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function tfoot ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','tfoot',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function tr ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','tr',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function th ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','th',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
+function td ($in = null,array $set = ['attrs' => [],'js' => false]) {
+    ajuste_1($in);
+    $auxJs = false;
+    $auxAttrs = [];
+    if(array_key_exists('attrs',$set)) {
+        $auxAttrs = $set['attrs'];
+    }
+    if(array_key_exists('js',$set)) {
+        $auxJs = $set['js'];
+    }
+    $tag = new Html('oc','td',$in,$auxAttrs,$auxJs);
+    return $tag->htg();
+}
+
 function img ($set = []) {
     $tag = new Html('sc','img',$set);
     return $tag->htg();
