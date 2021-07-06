@@ -431,6 +431,27 @@ html([
                     \$stmt->execute([\$search,\$limit]);
                     \$resultado = \$stmt->fetchAll();
                 ")
+            ]),
+            section([
+                h2('PDOException'),
+                pre("
+                    Esta clase la utilizamos por lo regular
+                    para cachar errores por ejemplo un uso tipico
+                    se puede ilustrar de esta forma
+
+                    try {
+                        //aqui va todo el codigo 
+                        //que hemos aprendido hasta el momento
+                    } catch (PDOException \$ex) {
+                        echo \$ex->getMessage();
+                    }
+
+                    con el metodo getMessage obtenemos el
+                    mensaje de error que se haya producido
+                    al tratar de ejecutar una conexion
+                    con la base de datos por ejemplo.
+
+                ")
             ])
         ]),
         hr(),
