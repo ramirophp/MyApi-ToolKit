@@ -1,4 +1,8 @@
-<?php class Html {
+<?php 
+
+namespace Rgg78\Htmlapi;
+
+class Html {
 
     private function get(string $url) {
         $sesionCurl = curl_init();
