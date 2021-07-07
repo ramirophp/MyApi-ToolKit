@@ -13,6 +13,7 @@ html([
             ul([
                 li(a('api v1',['attrs'=>['href'=>'./info.php']])),
                 li(a('pdo course',['attrs'=>['href'=>'./pdoCourse.php']])),
+                li(a('seguridad',['attrs'=>['href'=>'./seguridad.php']])),
                 li(a('aprender m&aacute;s',['attrs'=>[
                     'href'=>'https://www.udemy.com/course/curso-de-php-construyendo-mi-primer-caja-de-herramientas/'
                 ]]))

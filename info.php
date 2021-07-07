@@ -9,8 +9,7 @@ html([
     body([
         headxr([
             h1('Api urls - EndPoints'),
-            h2('Api home'),
-            ul(li(a('api v1',['attrs'=>['href'=>'./index.php']])))
+            ul(li(a('home',['attrs'=>['href'=>'./']])))
         ]),
         main([
             h3('Lista de etiquetas e informacion adicional

@@ -104,20 +104,7 @@
                 $this->tag['content'] = $content;
             }
             if(strpos($this->tag['content'] , 'script') !== false){
-                die("
-                <div style='border:1px solid #FFA62F;padding:10px;background-color:#306754;text-align:center;width:100%;'>
-                    &#10060; 
-                    <span style='color:#FFA62F;'>Js</span> 
-                    <span style='color:#FFFF00;'>is</span> 
-                    <span style='color:#FFA62F;'>Not</span> 
-                    <span style='color:#FFFF00;'>allowed</span> 
-                    <span style='color:#FFA62F;'>Change the js arg to true<br>
-                    <a href='./APIHtml.php?JS=true' style='text-decoration:none;color:#FFFF00;'>
-                    Change It</a>
-                    </span> 
-                    &#128113;
-                </div>
-                ");
+                die("Active js para permitir la palabra script dentro de sus tags.");
             }
         }
     }
