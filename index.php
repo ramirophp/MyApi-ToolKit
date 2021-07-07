@@ -14,9 +14,36 @@ html([
                 li(a('api v1',['href'=>'./info.php'])),
                 li(a('pdo course',['href'=>'./pdoCourse.php'])),
                 li(a('seguridad',['href'=>'./seguridad.php'])),
-                li(a('aprender m&aacute;s',[
-                    'href'=>'https://www.udemy.com/course/curso-de-php-construyendo-mi-primer-caja-de-herramientas/'
-                ]))
+                li('Cursos relacionados :'),
+                ul([
+                    li(a('ToolKit Version anterior PART 1:',[
+                        'href'=>'https://www.udemy.com/course/php-construyendo-mi-primer-caja-de-herramientas-part-1/'
+                    ])),
+                    li(a('ToolKit Version anterior PART 2:',[
+                        'href'=>'https://www.udemy.com/course/curso-de-php-construyendo-mi-primer-caja-de-herramientas/'
+                    ])),
+                    li(a('ToolKit Version anterior PART 3:',[
+                        'href'=>'https://www.udemy.com/course/php-construyendo-mi-primer-caja-de-herramientas-part-3/'
+                    ])),
+                    li(a('ToolKit Version anterior PART 4:',[
+                        'href'=>'https://www.udemy.com/course/php-construyendo-mi-primer-caja-de-herramientas-part-4/'
+                    ]))
+                ]),
+                li('Repositorios relacionados :'),
+                ul([
+                    li('Versiones 0 : '),
+                    ul([
+                        li(a('01',[
+                            'href' => 'https://github.com/rgg7888/SEH'
+                        ])),
+                        li(a('02',[
+                            'href' => 'https://github.com/rgg7888/htmlTags'
+                        ]))
+                    ]),
+                    li(a('Latest Versions',[
+                        'href' => 'https://github.com/ramirophp/MyApi-ToolKit'
+                    ]))
+                ])
             ])
         ]),
         main([
