@@ -9,7 +9,7 @@ html([
     body([
         headxr([
             h1('Api urls - EndPoints'),
-            ul(li(a('home',['attrs'=>['href'=>'./']])))
+            ul(li(a('home',['href'=>'./'])))
         ]),
         main([
             h3('Lista de etiquetas e informacion adicional
@@ -41,8 +41,5 @@ html([
         require_once './includes/ftr.php'
     ])
 ],[
-    'js' => false,
-    'attrs' => [
-        'lang' => 'es'
-    ]
+    'lang' => 'es'
 ]);

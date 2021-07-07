@@ -95,6 +95,34 @@ Dividida Por paginas (page 1-n)</h3>
 
 <hr>
 
+<h2>V1.2</h2>
+
+<pre>
+en esta version con excepcion del body
+la estructura de $set ya no sera asi :
+$set = [
+    'attrs' => [
+        'key' => 'value'
+    ],
+    'js' => false
+];
+ahora simplemente sera :
+$set = [
+    'key' => 'value'
+];
+</pre>
+
+<p>
+Tambien el ajuste_1() es solo para el body<br>
+en el caso de las otras etiquetas el mismo <br>
+compilador de php le indicara cuando coloque<br>
+los argumentos en el lugar incorrecto y de igual<br>
+forma para mantener vacia la etiqueta y agregarle<br>
+atributos inicialice a null el primer argumento
+</p>
+
+<hr>
+
 <h2>LICENSE</h2>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">

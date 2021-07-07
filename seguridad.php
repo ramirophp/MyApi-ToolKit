@@ -8,7 +8,7 @@ html([
     body([
         headxr([
             h1('Seguridad'),
-            ul(li(a('home',['attrs'=>['href'=>'./']])))
+            ul(li(a('home',['href'=>'./'])))
         ]),
         main([
             section([
@@ -28,7 +28,5 @@ html([
         require_once './includes/ftr.php'
     ],['js' => true])
 ],[
-    'attrs' => [
-        'lang' => 'es'
-    ]
+    'lang' => 'es'
 ]);

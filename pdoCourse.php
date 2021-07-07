@@ -12,10 +12,10 @@ html([
             h1('PDO Crash Course Para Principiantes (Basic Level)'),
             h2('Api urls'),
             ul([
-                li(a('home',['attrs'=>[
+                li(a('home',[
                     'href'=>'./index.php'
-                ]])),
-                li(a('api v1',['attrs'=>['href'=>'./info.php']]))
+                ])),
+                li(a('api v1',['href'=>'./info.php']))
             ])
         ]),
         main([
@@ -155,10 +155,8 @@ html([
                     ]),
                     p('$pdo = new PDO($dsn,"yourUser","yourPass");'),
                     a('setear..',[
-                        'attrs' => [
-                            'id' => 'ins',
-                            'href' => '#attr'
-                        ]
+                        'id' => 'ins',
+                        'href' => '#attr'
                     ])
                 ]),
                 div([
@@ -178,9 +176,7 @@ html([
                             El metodo fetch tiene varias opciones las cuales puede
                             consultar accediendo a esta url : ".
                             a('Fetch Options',[
-                                'attrs' => [
-                                    'href' => 'https://www.php.net/manual/es/pdostatement.fetch.php'
-                                ]
+                                'href' => 'https://www.php.net/manual/es/pdostatement.fetch.php'
                             ])
                             ."
                             
@@ -215,10 +211,8 @@ html([
                         para realizar esta accion justo despues de crear la instancia de pdo $br
                         ",
                         a('aqui',[
-                            'attrs' => [
-                                'href' => '#ins',
-                                'id' => 'attr'
-                            ]
+                            'href' => '#ins',
+                            'id' => 'attr'
                         ]),$br,
                         "Seteamos el atributo fetch de esta forma : $br",
                         '$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);'
@@ -415,10 +409,8 @@ html([
                     setear otro atributo despues de la instanciacion
                     de pdo ".
                     a('aqui',[
-                        'attrs' => [
-                            'href' => '#ins',
-                            'id' => 'attr'
-                        ]
+                        'href' => '#ins',
+                        'id' => 'attr'
                     ])
                     ."
                     \$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
@@ -458,8 +450,5 @@ html([
         require_once './includes/ftr.php'
     ])
 ],[
-    'js' => false,
-    'attrs' => [
-        'lang' => 'es'
-    ]
+    'lang' => 'es'
 ]);
