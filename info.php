@@ -38,6 +38,7 @@ html([
 
             h4('http://localhost/api/v1.php/attr/1')
         ]),
+        hr(),
         require_once './includes/ftr.php'
     ])
 ],[

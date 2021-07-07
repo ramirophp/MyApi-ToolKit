@@ -95,6 +95,7 @@ html([
                 li('functionName ();')
             ])
         ]),
+        hr(),
         require_once './includes/ftr.php'
     ])
 ],[

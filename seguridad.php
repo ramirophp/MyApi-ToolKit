@@ -25,8 +25,9 @@ html([
                 ])
             ])
         ]),
+        hr(),
         require_once './includes/ftr.php'
-    ],['js' => true])
+    ])
 ],[
     'lang' => 'es'
 ]);
