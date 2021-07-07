@@ -103,9 +103,36 @@
             }else{
                 $this->tag['content'] = $content;
             }
-            if(strpos($this->tag['content'] , 'script') !== false){
-                die("Active js para permitir la palabra script dentro de sus tags.");
+            if(strpos($this->tag['content'] , '<script>') !== false){
+                die("Active js.");
             }
+        }
+    }
+
+    private function _content ($content) {
+        if(is_array($content)) {
+            $aux = [];
+            for($i = 0; $i < count($content); $i++) {
+                array_push($aux,(is_array($content[$i])) ? implode("",$content[$i]) : $content[$i]);
+            }
+            $this->tag['content'] = implode("",$aux);
+        }else{
+            $this->tag['content'] = $content;
+        }
+        if(strpos($this->tag['content'] , '<script>') !== false){
+            die("Solamente en el body se permite javascript.");
+        }
+    }
+
+    private function htmlcontent ($content) {
+        if(is_array($content)) {
+            $aux = [];
+            for($i = 0; $i < count($content); $i++) {
+                array_push($aux,(is_array($content[$i])) ? implode("",$content[$i]) : $content[$i]);
+            }
+            $this->tag['content'] = implode("",$aux);
+        }else{
+            $this->tag['content'] = $content;
         }
     }
 
@@ -190,7 +217,13 @@
         $this->tag($tag);
         $this->attrs($attrs);
         if($this->tag['type'] === 'oc') {
-            $this->content($content,$js);
+            if($this->tag['tag'] == 'body') {
+                $this->content($content,$js);
+            }elseif($this->tag['tag'] == 'html'){
+                $this->htmlcontent($content);
+            }else{
+                $this->_content($content);
+            }
             $this->tag['result'] = '<'.$this->tag['tag'].$this->tag['attrs'].'>'.$this->tag['content'].'</'.$this->tag['tag'].'>';
         }else{
             $this->tag['result'] = '<'.$this->tag['tag'].$this->tag['attrs'].'>';

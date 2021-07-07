@@ -21,14 +21,13 @@ html([
                         "forma que se ejecuta en el navegador del cliente. Los ataques se $br",
                         "producen principalmente por validar incorrectamente datos de usuario, $br",
                         "y se suelen inyectar mediante un formulario web o mediante un enlace alterado."
-                    ],['js'=>true])
-                ],['js'=>true])
-            ],['js'=>true])
-        ],['js'=>true]),
+                    ])
+                ])
+            ])
+        ]),
         require_once './includes/ftr.php'
-    ],['js'=>true])
+    ],['js' => true])
 ],[
-    'js' => true,
     'attrs' => [
         'lang' => 'es'
     ]
