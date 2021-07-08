@@ -18,7 +18,7 @@ class DataBase {
             $this->conexion = new PDO ('mysql:host=' . $this->host . ';dbname=' . $this->db_name,
             $this->user, $this->pass);
 
-            $this->conexion->setAttributes (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->conexion->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         } catch (PDOException $pdoex) {
 
