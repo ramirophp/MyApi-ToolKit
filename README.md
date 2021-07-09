@@ -1,5 +1,35 @@
 # MyApi-ToolKit
 
+<h2>Todo List :</h2> 
+
+<ul>
+    <li>Implementar Leer Un solo Articulo(post) por id</li>
+    <li>Implementar Leer Articulos(posts) formato paginacion</li>
+    <li>Implementar metodo POST(create) para los articulos(posts)</li>
+    <li>Implementar metodo PUT(update) para los articulos(posts)</li>
+    <li>Implementar metodo DELETE para los articulos(posts)</li>
+    <li>Implementar Leer Categorias</li>
+    <li>Implementar Leer una Categoria</li>
+    <li>Implementar Leer categorias formato paginacion</li>
+    <li>Implementar crear(POST) para las categorias</li>
+    <li>Implementar actualizar(PUT) para las categorias</li>
+    <li>Implementar borrar(DELETE) para las categorias</li>
+    <li>Implementar Leer etiquetas</li>
+    <li>Implementar Leer una etiqueta</li>
+    <li>Implementar Leer etiquetas formato paginacion</li>
+    <li>Implementar crear etiqueta</li>
+    <li>Implementar actualizar etiqueta</li>
+    <li>Implementar borrar etiqueta</li>
+    <li>Implementar Leer atributos</li>
+    <li>Implementar Leer un atributo</li>
+    <li>Implementar Leer atributos formato paginacion</li>
+    <li>Implementar crear atributo</li>
+    <li>Implementar actualizar atributo</li>
+    <li>Implementar borrar atributo</li>
+</ul>
+
+<hr>
+
 <h1>ETIQUETAS HTML COMO FUNCIONES EN PHP (html tags as php functions)</h1>
 
 <h2>Argumentos por funcion del tipo apertura y cierre</h2>
