@@ -53,7 +53,27 @@ class Respuesta {
 
         switch(strtoupper($_SERVER['REQUEST_METHOD'])) {
 
-            case 'GET': break;
+            case 'GET': 
+                
+                switch($recurso) {
+
+                    case 'articulos': 
+                        
+                        if ( $subRecurso == 'registros' && $int == 0 ) {
+
+                            require_once './EndPoints/LeerArticulos.php';
+
+                        } elseif ( $subRecurso == 'registros' && $int != 0 ) {
+
+                            //aqui el endpoint para  leer un articulo
+
+                        }
+
+                    break;
+
+                }
+
+            break;
 
             case 'POST': break;
 
@@ -123,7 +143,7 @@ class Respuesta {
                         echo json_encode ( [
                             'respuesta' => 'Error 404 Sub Recurso No Encontrado.'
                         ] );
-                        
+
                     }
 
                 } else {
