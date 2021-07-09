@@ -141,6 +141,14 @@ Incluye la version offline CajaDeHerramientas para crear sus propias tags<br>
 sin depender de una api o base de datos para obtener las tags y attrs
 </p>
 
+<p>
+Si prefiere no estar limitado por una lista<br>
+predefinida de etiquetas , y no quiere<br>
+depender de una api o conexion a internet,<br>
+ademas quiere utilizar funciones dedicadas <br>
+a js , css y, mysql utilice seh (sistema_de_etiquetas_html)
+</p>
+
 <hr>
 
 <h2>Constante $br / salto de linea en texto br()</h2>
