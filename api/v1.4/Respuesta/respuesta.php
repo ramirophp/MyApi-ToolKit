@@ -63,9 +63,13 @@ class Respuesta {
 
                             require_once './EndPoints/LeerArticulos.php';
 
-                        } elseif ( $subRecurso == 'registros' && $int != 0 ) {
+                        } elseif ( $subRecurso == 'registros' && $int > 0 ) {
 
                             //aqui el endpoint para  leer un articulo
+
+                        } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
+
+                            //aqui el endpoint para leer articulos formato paginacion
 
                         }
 
