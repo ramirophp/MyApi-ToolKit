@@ -26,6 +26,9 @@
     <li>Implementar crear atributo</li>
     <li>Implementar actualizar atributo</li>
     <li>Implementar borrar atributo</li>
+    <li>Eliminar Archivos Innecesarios</li>
+    <li>Modificar los includes de las paginas</li>
+    <li>Cambiar la url del metodo get en la clase Html</li>
 </ul>
 
 <hr>
