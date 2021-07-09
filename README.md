@@ -125,7 +125,7 @@ Dividida Por paginas (page 1-n)</h3>
 
 <hr>
 
-<h2>V1.2</h2>
+<h2>V1.2 en adelante</h2>
 
 <pre>
 en esta version con excepcion del body
@@ -149,6 +149,15 @@ compilador de php le indicara cuando coloque<br>
 los argumentos en el lugar incorrecto y de igual<br>
 forma para mantener vacia la etiqueta y agregarle<br>
 atributos inicialice a null el primer argumento
+</p>
+
+<hr>
+
+<h2>V1.4</h2>
+
+<p>
+Incluye la version offline CajaDeHerramientas para crear sus propias tags<br>
+sin depender de una api o base de datos para obtener las tags y attrs
 </p>
 
 <hr>
