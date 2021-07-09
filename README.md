@@ -36,7 +36,37 @@
 
 <h1>ETIQUETAS HTML COMO FUNCIONES EN PHP (html tags as php functions)</h1>
 
-<h2>Argumentos por funcion del tipo apertura y cierre</h2>
+<h2>Prototipos</h2>
+
+<ol>
+    <li>functionName (string|array $in, array $set);</li>
+    <li>functionName (array $set);</li>
+    <li>functionName ();</li>
+</ol>
+
+<h2>Funciones sin argumentos</h2>
+
+<ol>
+    <li>doctype();</li>
+    <li>hr();</li>
+    <li>br();</li>
+</ol>
+
+<h2>Funciones auto imprimibles</h2>
+
+<ol>
+    <li>doctype();</li>
+    <li>html();</li>
+</ol>
+
+<h2>Argumentos por funcion<br>
+
+<h3>html(arg $int,arg $set),
+head(arg $int,arg $set),
+body(arg $int,arg $set), 
+etc.</h3>
+
+<br> del tipo apertura y cierre</h2>
 
 <ol>
     <li>$in string|array</li>
@@ -73,59 +103,6 @@ $set = [
     'key' => 'value'
 ];
 </pre>
-
-<h2>Funciones auto imprimibles</h2>
-
-<ol>
-    <li>doctype();</li>
-    <li>html();</li>
-</ol>
-
-<h2>Funciones sin argumentos</h2>
-
-<ol>
-    <li>doctype();</li>
-    <li>hr();</li>
-    <li>br();</li>
-</ol>
-
-<h2>Prototipos</h2>
-
-<ol>
-    <li>functionName (string|array $in, array $set);</li>
-    <li>functionName (array $set);</li>
-    <li>functionName ();</li>
-</ol>
-
-<hr>
-
-<h2>Api urls</h2>
-
-<h3>Lista de etiquetas e informacion adicional
-Dividida Por paginas (page 1-n)</h3>
-
-<h4>http://localhost/api/v1.php/tags/1</h4>
-
-<h3>Lista de Atributos e informacion adicional
-Dividida Por paginas (page 1-n)</h3>
-
-<h4>http://localhost/api/v1.php/attrs/1</h4>
-
-<h3>Lista de etiquetas</h3>
-
-<h4>http://localhost/api/v1.php/tag</h4>
-
-<h3>Obtener una etiqueta por id (1-n)</h3>
-
-<h4>http://localhost/api/v1.php/tag/1</h4>
-
-<h3>Lista de atributos</h3>
-
-<h4>http://localhost/api/v1.php/attr</h4>
-
-<h3>Obtener un atributo por id (1-n)</h3>
-
-<h4>http://localhost/api/v1.php/attr/1</h4>
 
 <hr>
 
