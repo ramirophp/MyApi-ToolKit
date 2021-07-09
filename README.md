@@ -29,6 +29,7 @@
     <li>Eliminar Archivos Innecesarios</li>
     <li>Modificar los includes de las paginas</li>
     <li>Cambiar la url del metodo get en la clase Html</li>
+    <li>Actualizar La pagina info.php</li>
 </ul>
 
 <hr>
