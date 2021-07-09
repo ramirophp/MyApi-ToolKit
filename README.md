@@ -143,6 +143,50 @@ sin depender de una api o base de datos para obtener las tags y attrs
 
 <hr>
 
+<h2>Constante $br / salto de linea en texto br()</h2>
+
+<p>
+En ocaciones necesitara escribir saltos 
+de linea dentro de parrafos y, hay varias
+formas en las que puede formatear sus parrafos
+</p>
+
+<p>
+Recuerde que $in puede ser un 
+arreglo , entonces las siguientes formas 
+de formatear un parrafo son validas
+</p>
+
+<ol>
+    <li>
+        <pre>
+            p('
+                texto texto'.br().'
+                salto de linea texto texto
+            '
+            );
+        </pre>
+    </li>
+    <li>
+        <pre>
+            p([
+                'texto texto texto',
+                br(),
+                'salto de linea texto texto'
+            ]);
+        </pre>
+    </li>
+    <li>
+        <pre>
+            p("
+                texto texto $br salto de linea texto texto
+            ");
+        </pre>
+    </li>
+</ol>
+
+<hr>
+
 <h2>LICENSE</h2>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
