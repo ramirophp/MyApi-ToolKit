@@ -62,7 +62,7 @@
 <h2>Argumentos por funcion<br>
 
 <h3>html(arg $int,arg $set),
-head(arg $int,arg $set),
+head(arg $int),
 body(arg $int,arg $set), 
 etc.</h3>
 
