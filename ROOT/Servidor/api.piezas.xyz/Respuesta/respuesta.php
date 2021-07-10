@@ -40,16 +40,21 @@ class Respuesta {
         $uriTemporal = $_SERVER['REQUEST_URI'];
         $uriTemporal = str_replace('/','*/',$uriTemporal);
         $uriTemporal = explode('*',$uriTemporal);
-        $this->url = (count($uriTemporal) === 7) ? $uriTemporal[4].$uriTemporal[5].$uriTemporal[6]  : (
-            (count($uriTemporal) === 6) ? $uriTemporal[4].$uriTemporal[5] : ''
-        );
+
+        $isInt = trim($uriTemporal[count($uriTemporal)-1],'/');
+        
+        if(preg_match('/^[0-9]{1,3}$/',$isInt)) {
+            $this->url = $uriTemporal[count($uriTemporal)-3].$uriTemporal[count($uriTemporal)-2].$uriTemporal[count($uriTemporal)-1];
+        }else{
+            $this->url = $uriTemporal[count($uriTemporal)-2].$uriTemporal[count($uriTemporal)-1];
+        }
     }
 
     public function getUrl () {
         return $this->url;
     }
 
-    private function getPostPutDelete (string $recurso,string $subRecurso,int $int=0) {
+    private function getPostPutDelete (string $recurso,string $subRecurso,int $int = -1) {
 
         switch(strtoupper($_SERVER['REQUEST_METHOD'])) {
 
@@ -59,21 +64,32 @@ class Respuesta {
 
                     case 'articulos': 
                         
-                        if ( $subRecurso == 'registros' && $int == 0 ) {
+                        if ( $subRecurso == 'registros' && $int == -1 ) {
 
                             require_once './EndPoints/LeerArticulos.php';
 
                         } elseif ( $subRecurso == 'registros' && $int > 0 ) {
 
-                            //aqui el endpoint para  leer un articulo
+                            $_GET['id'] = $int;
+                            require_once './Endpoints/LeerArticulo.php';
 
                         } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
 
                             //aqui el endpoint para leer articulos formato paginacion
 
+                        } else {
+
+                            echo json_encode ( [
+                                'respuesta' => 'Error 404 Url No Encontrada.'
+                            ] );
+
                         }
 
                     break;
+
+                    default : echo json_encode ( [
+                        'respuesta' => 'Error 404 Recurso No Encontrado.'
+                    ] );
 
                 }
 
@@ -107,7 +123,7 @@ class Respuesta {
     
                         Logger::logger("Esta solicitando $recurso tipo $subRecurso");
 
-                        $this->getPostPutDelete ($recurso,$subRecurso,$recurso_subRecurso_paginacion_o_registros[3]);
+                        $this->getPostPutDelete ($recurso,$subRecurso,(int)$recurso_subRecurso_paginacion_o_registros[3]);
     
                     } else {
                         echo json_encode ( [
