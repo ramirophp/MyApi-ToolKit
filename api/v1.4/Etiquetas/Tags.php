@@ -1,61 +1,7 @@
 <?php
 
-//para el body only
-function ajuste_1 ($var) {
-    if($var != null && is_array($var)) {
-        if(array_key_exists('js',$var) || array_key_exists('attrs',$var)) {
-            die(html([
-                head([
-                    title('Error en Parametros')
-                ]),
-                body([
-                    h1('Argumentos en la posicion incorrecta'),
-                    p('Si quiere mantener la etiqueta vacia ,
-                    agregue la palabra null como primer argumento'),
-                    p('Si no necesita tampoco atributos,
-                    simplemente no le pase argumentos a 
-                    la funcion.')
-                ])
-            ],[
-                'attrs' => [
-                    'lang' => 'es'
-                ]
-            ]));
-        }
-    }
-}
-
-function doctype () {
-    $tag = new Html('sc','doctype',['!'=>'html']);
-    echo $tag->htg();
-}
-
-function html ($in = null,array $set = []) {
-    $tag = new Html('oc','html',$in,$set);
-    echo $tag->htg();
-}
-
-function head ($in = null) {
-    $tag = new Html('oc','head',$in);
-    return $tag->htg();
-}
-
 function title ($in = null) {
     $tag = new Html('oc','title',$in);
-    return $tag->htg();
-}
-
-function body ($in = null,array $set = ['attrs' => [],'js' => false]) {
-    ajuste_1($in);
-    $auxJs = false;
-    $auxAttrs = [];
-    if(array_key_exists('attrs',$set)) {
-        $auxAttrs = $set['attrs'];
-    }
-    if(array_key_exists('js',$set)) {
-        $auxJs = $set['js'];
-    }
-    $tag = new Html('oc','body',$in,$auxAttrs,$auxJs);
     return $tag->htg();
 }
 

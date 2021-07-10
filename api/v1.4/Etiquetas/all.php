@@ -13,6 +13,6 @@
  * construirlas usted mismo
  */
 #require_once('./v1.4/Etiquetas/Caja.php');
-require_once('./v1.4/Etiquetas/Html.php');
-require_once('./v1.4/Etiquetas/Tags.php');
-require_once('./v1.4/Etiquetas/const.php');
+require_once('./Etiquetas/Html.php');
+require_once('./Etiquetas/Tags.php');
+require_once('./Etiquetas/const.php');

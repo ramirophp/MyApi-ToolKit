@@ -95,7 +95,19 @@ class Respuesta {
 
             break;
 
-            case 'POST': break;
+            case 'POST': 
+
+                switch($recurso) {
+
+                    case 'articulos': 
+
+                        require_once './Endpoints/CrearArticulo.php';
+                    
+                    break;
+
+                }
+                
+            break;
 
             case 'PUT': break;
 
