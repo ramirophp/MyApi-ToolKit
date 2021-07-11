@@ -87,6 +87,31 @@ class Respuesta {
 
                     break;
 
+                    case 'categorias':
+
+                        if ( $subRecurso == 'registros' && $int == -1 ) {
+
+                            require_once './EndPoints/LeerCategorias.php';
+
+                        } elseif ( $subRecurso == 'registros' && $int > 0 ) {
+
+                            #$_GET['id'] = $int;
+                            #require_once './Endpoints/LeerCategoria.php';
+
+                        } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
+
+                            //aqui el endpoint para leer articulos formato paginacion
+
+                        } else {
+
+                            echo json_encode ( [
+                                'respuesta' => 'Error 404 Url No Encontrada.'
+                            ] );
+
+                        }
+
+                    break;
+
                     default : echo json_encode ( [
                         'respuesta' => 'Error 404 Recurso No Encontrado.'
                     ] );
