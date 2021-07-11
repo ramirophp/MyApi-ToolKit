@@ -4,7 +4,10 @@ require_once './Etiquetas/Html.php';
 
 html([
     'head' => [],
-    'body' => []
+    'body' => [
+        div(),
+        script()
+    ]
 ],[
     'html' => [],
     'body' => [],

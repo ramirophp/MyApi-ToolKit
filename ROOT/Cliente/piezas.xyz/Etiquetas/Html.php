@@ -310,7 +310,7 @@
 
         if($this->tag['type'] === 'oc') {
 
-            if($this->tag['tag'] == 'html') {
+            if($this->tag['tag'] == 'body' || $this->tag['tag'] == 'html') {
 
                 $this->content($content,$js);
 
@@ -371,7 +371,7 @@ function html (array $in = [
     
     $head = new Html('oc','head',$in['head'],[],false,$set['on']);
 
-    $body = new Html('oc','body',$in['body'],$set['body'],true,$set['on']);
+    $body = new Html('oc','body',$in['body'],$set['body'],$set['js'],$set['on']);
 
     $doctype = new Html('sc','doctype',['!'=>'html'],false,$set['on']);
 
@@ -385,4 +385,14 @@ function html (array $in = [
         $html->element()
     ]);
 
+}
+
+function div ($in = null,array $set = [],$on = false) {
+    $div = new Html('oc','div',$in,$set,false,$on);
+    return $div->element();
+}
+
+function script ($in = null,array $set = [],$on = false) {
+    $script = new Html('oc','script',$in,$set,$on);
+    return $script->element();
 }
