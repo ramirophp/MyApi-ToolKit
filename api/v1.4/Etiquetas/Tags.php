@@ -5,11 +5,6 @@ function title ($in = null) {
     return $tag->htg();
 }
 
-function div ($in = null,array $set = []) {
-    $tag = new Html('oc','div',$in,$set);
-    return $tag->htg();
-}
-
 function h1 ($in = null,array $set = []) {
     $tag = new Html('oc','h1',$in,$set);
     return $tag->htg();
@@ -92,11 +87,6 @@ function li ($in = null,array $set = []) {
 
 function main ($in = null,array $set = []) {
     $tag = new Html('oc','main',$in,$set);
-    return $tag->htg();
-}
-
-function script ($in = null,array $set = []) {
-    $tag = new Html('oc','script',$in,$set);
     return $tag->htg();
 }
 
