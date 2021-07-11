@@ -205,6 +205,31 @@ a js , css y, mysql utilice seh (sistema_de_etiquetas_html)
 
 <hr>
 
+<h2>V1.4.1 Main function - Estructura basica de una pagina</h2>
+
+<pre>
+html([
+    'head' => [],    ---------> head content
+    'body' => [      ---------> body content
+        div(),       
+        script()     
+    ]
+],[
+    'html' => [],   ----------> html tag attributes
+    'body' => [],   ----------> body tag attributes
+    'js' => false,  ----------> switch for javascript
+    'on' => false   ----------> online api connection switch
+]);
+</pre>
+
+<h2>Prototipo para las etiquetas</h2>
+
+<p>
+tagName ($in = null,array $set = [],$on = false);
+</p>
+
+<hr>
+
 <h2>Constante $br / salto de linea en texto br()</h2>
 
 <p>
