@@ -95,8 +95,8 @@ class Respuesta {
 
                         } elseif ( $subRecurso == 'registros' && $int > 0 ) {
 
-                            #$_GET['id'] = $int;
-                            #require_once './Endpoints/LeerCategoria.php';
+                            $_GET['id'] = $int;
+                            require_once './Endpoints/LeerCategoria.php';
 
                         } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
 

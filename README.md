@@ -9,7 +9,7 @@
     <li>Implementar metodo PUT(update) para los articulos(posts)</li>
     <li>Implementar metodo DELETE para los articulos(posts)</li>
     <li>Implementar Leer Categorias DONE</li>
-    <li>Implementar Leer una Categoria</li>
+    <li>Implementar Leer una Categoria DONE</li>
     <li>Implementar Leer categorias formato paginacion</li>
     <li>Implementar crear(POST) para las categorias</li>
     <li>Implementar actualizar(PUT) para las categorias</li>
