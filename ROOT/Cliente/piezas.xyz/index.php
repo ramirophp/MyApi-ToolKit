@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../Servidor/api.piezas.xyz/Etiquetas/Html.php';
+require_once './Etiquetas/Html.php';
 
 html([
     'head' => [],
