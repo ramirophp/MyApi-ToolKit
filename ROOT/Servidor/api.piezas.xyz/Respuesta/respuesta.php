@@ -132,7 +132,7 @@ class Respuesta {
 
                     case 'categorias': 
 
-                        require_once './Endpoints/CrearArticulo.php';
+                        require_once './Endpoints/CrearCategoria.php';
                     
                     break;
 
@@ -147,6 +147,12 @@ class Respuesta {
                     case 'articulos':
 
                         require_once('./Endpoints/ActualizarArticulo.php');
+
+                    break;
+
+                    case 'categorias':
+
+                        require_once('./Endpoints/ActualizarCategoria.php');
 
                     break;
 
