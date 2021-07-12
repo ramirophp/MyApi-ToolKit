@@ -3,17 +3,6 @@
 <h2>Todo List :</h2> 
 
 <ul>
-    <li>Implementar Leer Un solo Articulo(post) por id DONE</li>
-    <li>Implementar Leer Articulos(posts) formato paginacion DONE</li>
-    <li>Implementar metodo POST(create) para los articulos(posts) DONE</li>
-    <li>Implementar metodo PUT(update) para los articulos(posts) DONE</li>
-    <li>Implementar metodo DELETE para los articulos(posts) DONE</li>
-    <li>Implementar Leer Categorias DONE</li>
-    <li>Implementar Leer una Categoria DONE</li>
-    <li>Implementar Leer categorias formato paginacion DONE</li>
-    <li>Implementar crear(POST) para las categorias DONE</li>
-    <li>Implementar actualizar(PUT) para las categorias DONE</li>
-    <li>Implementar borrar(DELETE) para las categorias DONE</li>
     <li>Implementar Leer etiquetas</li>
     <li>Implementar Leer una etiqueta</li>
     <li>Implementar Leer etiquetas formato paginacion</li>
@@ -26,10 +15,6 @@
     <li>Implementar crear atributo</li>
     <li>Implementar actualizar atributo</li>
     <li>Implementar borrar atributo</li>
-    <li>Eliminar Archivos Innecesarios</li>
-    <li>Modificar los includes de las paginas</li>
-    <li>Cambiar la url del metodo get en la clase Html</li>
-    <li>Actualizar La pagina info.php</li>
 </ul>
 
 <hr>
