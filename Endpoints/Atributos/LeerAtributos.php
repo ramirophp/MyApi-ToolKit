@@ -4,41 +4,41 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
 include_once './Configuracion/Conectar.php';
-include_once './Recursos/Etiquetas.php';
+include_once './Recursos/Atributos.php';
 
 $database = new Conectar;
 $db = $database->conectar();
 
-$etiqueta = new Etiquetas ($db);
+$atributo = new Atributos ($db);
 
-$result = $etiqueta->read();
+$result = $atributo->read();
 
 $num = $result->rowCount();
 
 if ( $num > 0 ) {
 
-    $etiqueta_arr = [];
-    $etiqueta_arr['data'] = [];
+    $atributo_arr = [];
+    $atributo_arr['data'] = [];
 
     while ( $row = $result->fetch(PDO::FETCH_ASSOC) ) {
 
         extract ($row);
 
-        $etiqueta_item = [
+        $atributo_item = [
             'id' => $id,
             'name' => $name
         ];
 
-        array_push ( $etiqueta_arr['data'], $etiqueta_item );
+        array_push ( $atributo_arr['data'], $atributo_item );
 
     }
 
-    echo json_encode ($etiqueta_arr);
+    echo json_encode ($atributo_arr);
 
 } else {
 
     echo json_encode ([
-        'respuesta' => 'No hay Etiquetas para mostrar'
+        'respuesta' => 'No hay Atributos para mostrar'
     ]);
 
 }

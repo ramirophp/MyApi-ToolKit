@@ -137,6 +137,31 @@ class Respuesta {
 
                     break;
 
+                    case 'atributos':
+
+                        if ( $subRecurso == 'registros' && $int == -1 ) {
+
+                            require_once './EndPoints/Atributos/LeerAtributos.php';
+
+                        } elseif ( $subRecurso == 'registros' && $int > 0 ) {
+
+                            #$_GET['id'] = $int;
+                            #require_once './Endpoints/Categorias/LeerCategoria.php';
+
+                        } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
+                            
+                            #require_once './Endpoints/Categorias/CategoriasPaginacion.php';
+
+                        } else {
+
+                            echo json_encode ( [
+                                'respuesta' => 'Error 404 Url No Encontrada.'
+                            ] );
+
+                        }
+
+                    break;
+
                     default : echo json_encode ( [
                         'respuesta' => 'Error 404 Recurso No Encontrado.'
                     ] );

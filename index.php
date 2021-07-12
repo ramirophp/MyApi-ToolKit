@@ -5,12 +5,12 @@ require_once './Etiquetas/Html.php';
 html([
     'head' => [],
     'body' => [
-        div(),
+        div("hello world.",['class' => 'myDiv']),
         script()
     ]
 ],[
     'html' => [],
     'body' => [],
-    'js' => false,
-    'on' => false
+    'js' => true,
+    'on' => true
 ]);

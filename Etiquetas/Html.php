@@ -33,11 +33,11 @@
 
         $valid = false;
         
-        for ($i = 0; $i < count($tags['tags']); $i++) {
+        for ($i = 0; $i < count($tags['data']); $i++) {
 
-            if ($tag === $tags['tags'][$i]['name']) {
+            if ($tag === $tags['data'][$i]['name']) {
 
-                $this->tag['tag'] = $tags['tags'][$i]['name'];
+                $this->tag['tag'] = $tags['data'][$i]['name'];
 
                 $valid = true;
 
@@ -165,9 +165,9 @@
 
                 for($i = 0; $i < count($tmpAttrs); $i++) {
 
-                    for($j = 0; $j < count($validAttrs['attrs']); $j++) {
+                    for($j = 0; $j < count($validAttrs['data']); $j++) {
 
-                        if ($tmpAttrs[$i] === $validAttrs['attrs'][$j]['name']) {
+                        if ($tmpAttrs[$i] === $validAttrs['data'][$j]['name']) {
 
                             $valid = true;
 
@@ -193,9 +193,9 @@
 
             } else {
 
-                for($i = 0; $i < count($validAttrs['attrs']); $i++) {
+                for($i = 0; $i < count($validAttrs['data']); $i++) {
 
-                    if($key === $validAttrs['attrs'][$i]['name']) {
+                    if($key === $validAttrs['data'][$i]['name']) {
 
                         $valid = true;
 
@@ -266,7 +266,7 @@
 
             $sesionCurl = curl_init();
 
-            curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/api/v1.php/tag');
+            curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/ceerr.php/etiquetas/registros');
 
             curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 
@@ -284,7 +284,7 @@
             
             $sesionCurl = curl_init();
 
-            curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/api/v1.php/attr');
+            curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/ceerr.php/atributos/registros');
 
             curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 
@@ -361,8 +361,8 @@ function html (array $in = [
     array $set = [
         'html' => [],
         'body' => [],
-        'js' => false,
-        'on' => false
+        'js' => true,
+        'on' => true
     ]) {
 
     if(!validarEstructuras($in,$set)) {
