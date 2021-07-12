@@ -4,7 +4,7 @@
 
 <ul>
     <li>Implementar Leer Un solo Articulo(post) por id DONE</li>
-    <li>Implementar Leer Articulos(posts) formato paginacion</li>
+    <li>Implementar Leer Articulos(posts) formato paginacion DONE</li>
     <li>Implementar metodo POST(create) para los articulos(posts) DONE</li>
     <li>Implementar metodo PUT(update) para los articulos(posts)</li>
     <li>Implementar metodo DELETE para los articulos(posts)</li>
