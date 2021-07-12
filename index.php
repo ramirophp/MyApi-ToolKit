@@ -12,7 +12,7 @@ html([
     ],
     'body' => [
         require_once('./Etiquetas/Piezas/Slideshow/Slideshow.php'),
-        script(null,['src' => './index.js'])
+        script(null,['src' => './Etiquetas/Piezas/Slideshow/Slideshow.js'])
     ]
 ],[
     'html' => ['lang' => 'es'],
