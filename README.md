@@ -4,7 +4,7 @@
 
 <p>
 tagName ($in = null,array $set = [],$on = true); -----> Open & Close tag type<br>
-tagName (array $set = [],$on = true) -----> Self Closing tag type
+tagName (array $set = [],$on = true); -----> Self Closing tag type
 </p>
 
 <br>Parametros</h2>
