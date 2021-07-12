@@ -99,6 +99,12 @@ de que exista o no una lista , el elemento que se <br>
 creara es si o si valido.
 </p>
 
+<p>
+Pero tome en cuenta que se recomienda siempre<br>
+tener en on la conexion para que se asegure que<br>
+los atributos que ingrese se validen.
+</p>
+
 <hr>
 
 <h2>LICENSE</h2>
