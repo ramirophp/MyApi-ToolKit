@@ -170,6 +170,12 @@ class Respuesta {
 
                     break;
 
+                    case 'categorias':
+
+                        require_once('./Endpoints/EliminarCategoria.php');
+
+                    break;
+
                 }
                 
             break;
