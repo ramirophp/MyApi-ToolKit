@@ -1,11 +1,11 @@
 <?php
 
-require_once './Etiquetas/Html.php';
+require_once './Etiquetas/Core/Html.php';
 
 html([
     'head' => [],
     'body' => [
-        div("hello world.",['class' => 'myDiv']),
+        require_once('./Etiquetas/Piezas/Slideshow/Slideshow.php'),
         script(null,['src' => './index.js'])
     ]
 ],[

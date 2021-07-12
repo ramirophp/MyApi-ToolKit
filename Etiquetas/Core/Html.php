@@ -396,3 +396,23 @@ function script ($in = null,array $set = [],$on = true) {
     $script = new Html('oc','script',$in,$set,$on);
     return $script->element();
 }
+
+function img (array $set = [],$on = true) {
+    $img = new Html('sc','img',$set,false,$on);
+    return $img->element();
+}
+
+function a ($in = null,array $set = [],$on = true) {
+    $a = new Html('oc','a',$in,$set,false,$on);
+    return $a->element();
+}
+
+function br ($on = true) {
+    $br = new Html('sc','br',[],false,$on);
+    return $br->element();
+}
+
+function span ($in = null,array $set = [],$on = true) {
+    $span = new Html('oc','span',$in,$set,false,$on);
+    return $span->element();
+}
