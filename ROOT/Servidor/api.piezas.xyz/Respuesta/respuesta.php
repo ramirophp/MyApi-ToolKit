@@ -130,6 +130,12 @@ class Respuesta {
                     
                     break;
 
+                    case 'categorias': 
+
+                        require_once './Endpoints/CrearCategoria.php';
+                    
+                    break;
+
                 }
                 
             break;
