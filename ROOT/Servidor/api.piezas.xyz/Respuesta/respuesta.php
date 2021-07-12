@@ -140,7 +140,19 @@ class Respuesta {
                 
             break;
 
-            case 'PUT': break;
+            case 'PUT': 
+
+                switch($recurso) {
+
+                    case 'articulos':
+
+                        require_once('./Endpoints/ActualizarArticulo.php');
+
+                    break;
+
+                }
+                
+            break;
 
             case 'DELETE': break;
 
