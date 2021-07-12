@@ -40,8 +40,8 @@ html([
 ],[
     'html' => [],   ----------> html tag attributes
     'body' => [],   ----------> body tag attributes
-    'js' => false,  ----------> switch for javascript
-    'on' => false   ----------> online api connection switch
+    'js' => true,  ----------> switch for javascript
+    'on' => true   ----------> online api connection switch
 ]);
 </pre>
 
