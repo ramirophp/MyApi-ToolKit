@@ -10,7 +10,7 @@
     <li>Implementar metodo DELETE para los articulos(posts) DONE</li>
     <li>Implementar Leer Categorias DONE</li>
     <li>Implementar Leer una Categoria DONE</li>
-    <li>Implementar Leer categorias formato paginacion</li>
+    <li>Implementar Leer categorias formato paginacion DONE</li>
     <li>Implementar crear(POST) para las categorias DONE</li>
     <li>Implementar actualizar(PUT) para las categorias</li>
     <li>Implementar borrar(DELETE) para las categorias</li>

@@ -99,8 +99,8 @@ class Respuesta {
                             require_once './Endpoints/LeerCategoria.php';
 
                         } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
-
-                            //aqui el endpoint para leer articulos formato paginacion
+                            
+                            require_once './Endpoints/CategoriasPaginacion.php';
 
                         } else {
 

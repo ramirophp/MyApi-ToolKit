@@ -29,6 +29,30 @@ class Categorias {
 
     }
 
+    public function paginacion (int $inicia_desde, int $articulos_por_pagina) {
+
+        $query = "
+            SELECT SQL_CALC_FOUND_ROWS id,name
+            FROM ". $this->table . " 
+            ORDER BY created_at DESC LIMIT $inicia_desde, $articulos_por_pagina
+        ";
+
+        $stmt = $this->conexion->prepare($query);
+        $stmt->execute();
+
+        $total_registros = $this->conexion->query('SELECT FOUND_ROWS() as total');
+        $registros_en_total = (int)$total_registros->fetch()['total'];
+
+        $paginas_en_total = ceil($registros_en_total / $articulos_por_pagina);
+
+        return [
+            'categorias' => $stmt,
+            'registrosEnTotal' => $registros_en_total,
+            'paginas_en_total' => $paginas_en_total
+        ];
+
+    }
+
     public function read_single () {
 
         $query = '
