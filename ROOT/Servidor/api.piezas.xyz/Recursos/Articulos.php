@@ -43,6 +43,39 @@ class Articulos {
 
     }
 
+    public function paginacion (int $inicia_desde, int $articulos_por_pagina) {
+
+        $query = "
+            SELECT SQL_CALC_FOUND_ROWS c.name as category_name,
+            p.id,
+            p.category_id,
+            p.title,
+            p.body,
+            p.author,
+            p.created_at
+            FROM ". $this->table ." p
+            LEFT JOIN
+             categorias c ON p.category_id = c.id
+            ORDER BY
+             p.created_at DESC LIMIT $inicia_desde, $articulos_por_pagina
+        ";
+
+        $stmt = $this->conexion->prepare($query);
+        $stmt->execute();
+
+        $total_registros = $this->conexion->query('SELECT FOUND_ROWS() as total');
+        $registros_en_total = (int)$total_registros->fetch()['total'];
+
+        $paginas_en_total = ceil($registros_en_total / $articulos_por_pagina);
+
+        return [
+            'posts' => $stmt,
+            'registrosEnTotal' => $registros_en_total,
+            'paginas_en_total' => $paginas_en_total
+        ];
+
+    }
+
     public function read_single () {
 
         $query = '

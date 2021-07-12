@@ -75,7 +75,7 @@ class Respuesta {
 
                         } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
 
-                            //aqui el endpoint para leer articulos formato paginacion
+                            require_once './Endpoints/ArticulosPaginacion.php';
 
                         } else {
 
@@ -132,7 +132,7 @@ class Respuesta {
 
                     case 'categorias': 
 
-                        require_once './Endpoints/CrearCategoria.php';
+                        require_once './Endpoints/CrearArticulo.php';
                     
                     break;
 
@@ -165,7 +165,7 @@ class Respuesta {
                     if ( in_array($subRecurso,$this->getRp()[$recurso]) ) {
     
                         Logger::logger("Esta solicitando $recurso tipo $subRecurso");
-
+                        
                         $this->getPostPutDelete ($recurso,$subRecurso,(int)$recurso_subRecurso_paginacion_o_registros[3]);
     
                     } else {
