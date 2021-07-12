@@ -376,8 +376,8 @@ function html (array $in = [
     $doctype = new Html('sc','doctype',['!'=>'html'],false,$set['on']);
 
     $html = new Html('oc','html',[
-        $body->element(),
-        $head->element()
+        $head->element(),
+        $body->element()
     ],$set['html'],$set['js'],$set['on']);
 
     echo implode("",[
@@ -400,6 +400,11 @@ function script ($in = null,array $set = [],$on = true) {
 function img (array $set = [],$on = true) {
     $img = new Html('sc','img',$set,false,$on);
     return $img->element();
+}
+
+function _link (array $set = [],$on = true) {
+    $link = new Html('sc','link',$set,false,$on);
+    return $link->element();
 }
 
 function a ($in = null,array $set = [],$on = true) {
