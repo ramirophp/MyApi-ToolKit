@@ -154,7 +154,19 @@ class Respuesta {
                 
             break;
 
-            case 'DELETE': break;
+            case 'DELETE': 
+                
+                switch($recurso) {
+
+                    case 'articulos':
+
+                        require_once('./Endpoints/EliminarArticulo.php');
+
+                    break;
+
+                }
+                
+            break;
 
         }
 
