@@ -66,16 +66,16 @@ class Respuesta {
                         
                         if ( $subRecurso == 'registros' && $int == -1 ) {
 
-                            require_once './EndPoints/LeerArticulos.php';
+                            require_once './EndPoints/Articulos/LeerArticulos.php';
 
                         } elseif ( $subRecurso == 'registros' && $int > 0 ) {
 
                             $_GET['id'] = $int;
-                            require_once './Endpoints/LeerArticulo.php';
+                            require_once './Endpoints/Articulos/LeerArticulo.php';
 
                         } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
 
-                            require_once './Endpoints/ArticulosPaginacion.php';
+                            require_once './Endpoints/Articulos/ArticulosPaginacion.php';
 
                         } else {
 
@@ -91,16 +91,41 @@ class Respuesta {
 
                         if ( $subRecurso == 'registros' && $int == -1 ) {
 
-                            require_once './EndPoints/LeerCategorias.php';
+                            require_once './EndPoints/Categorias/LeerCategorias.php';
 
                         } elseif ( $subRecurso == 'registros' && $int > 0 ) {
 
                             $_GET['id'] = $int;
-                            require_once './Endpoints/LeerCategoria.php';
+                            require_once './Endpoints/Categorias/LeerCategoria.php';
 
                         } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
                             
-                            require_once './Endpoints/CategoriasPaginacion.php';
+                            require_once './Endpoints/Categorias/CategoriasPaginacion.php';
+
+                        } else {
+
+                            echo json_encode ( [
+                                'respuesta' => 'Error 404 Url No Encontrada.'
+                            ] );
+
+                        }
+
+                    break;
+
+                    case 'etiquetas':
+
+                        if ( $subRecurso == 'registros' && $int == -1 ) {
+
+                            require_once './EndPoints/Etiquetas/LeerEtiquetas.php';
+
+                        } elseif ( $subRecurso == 'registros' && $int > 0 ) {
+
+                            #$_GET['id'] = $int;
+                            #require_once './Endpoints/Categorias/LeerCategoria.php';
+
+                        } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
+                            
+                            #require_once './Endpoints/Categorias/CategoriasPaginacion.php';
 
                         } else {
 
@@ -126,13 +151,13 @@ class Respuesta {
 
                     case 'articulos': 
 
-                        require_once './Endpoints/CrearArticulo.php';
+                        require_once './Endpoints/Articulos/CrearArticulo.php';
                     
                     break;
 
                     case 'categorias': 
 
-                        require_once './Endpoints/CrearCategoria.php';
+                        require_once './Endpoints/Categorias/CrearCategoria.php';
                     
                     break;
 
@@ -146,13 +171,13 @@ class Respuesta {
 
                     case 'articulos':
 
-                        require_once('./Endpoints/ActualizarArticulo.php');
+                        require_once('./Endpoints/Articulos/ActualizarArticulo.php');
 
                     break;
 
                     case 'categorias':
 
-                        require_once('./Endpoints/ActualizarCategoria.php');
+                        require_once('./Endpoints/Categorias/ActualizarCategoria.php');
 
                     break;
 
@@ -166,13 +191,13 @@ class Respuesta {
 
                     case 'articulos':
 
-                        require_once('./Endpoints/EliminarArticulo.php');
+                        require_once('./Endpoints/Articulos/EliminarArticulo.php');
 
                     break;
 
                     case 'categorias':
 
-                        require_once('./Endpoints/EliminarCategoria.php');
+                        require_once('./Endpoints/Categorias/EliminarCategoria.php');
 
                     break;
 
