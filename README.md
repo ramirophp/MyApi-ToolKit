@@ -3,12 +3,6 @@
 <h2>Todo List :</h2> 
 
 <ul>
-    <li>Implementar Leer etiquetas</li>
-    <li>Implementar Leer una etiqueta</li>
-    <li>Implementar Leer etiquetas formato paginacion</li>
-    <li>Implementar crear etiqueta</li>
-    <li>Implementar actualizar etiqueta</li>
-    <li>Implementar borrar etiqueta</li>
     <li>Implementar Leer atributos</li>
     <li>Implementar Leer un atributo</li>
     <li>Implementar Leer atributos formato paginacion</li>

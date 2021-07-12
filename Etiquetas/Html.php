@@ -387,12 +387,12 @@ function html (array $in = [
 
 }
 
-function div ($in = null,array $set = [],$on = false) {
+function div ($in = null,array $set = [],$on = true) {
     $div = new Html('oc','div',$in,$set,false,$on);
     return $div->element();
 }
 
-function script ($in = null,array $set = [],$on = false) {
+function script ($in = null,array $set = [],$on = true) {
     $script = new Html('oc','script',$in,$set,$on);
     return $script->element();
 }

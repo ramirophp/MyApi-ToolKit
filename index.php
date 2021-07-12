@@ -9,8 +9,8 @@ html([
         script()
     ]
 ],[
-    'html' => [],
-    'body' => [],
+    'html' => ['lang' => 'es'],
+    'body' => ['class' => 'container'],
     'js' => true,
     'on' => true
 ]);

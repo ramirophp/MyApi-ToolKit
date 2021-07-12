@@ -120,12 +120,12 @@ class Respuesta {
 
                         } elseif ( $subRecurso == 'registros' && $int > 0 ) {
 
-                            #$_GET['id'] = $int;
-                            #require_once './Endpoints/Categorias/LeerCategoria.php';
+                            $_GET['id'] = $int;
+                            require_once './Endpoints/Etiquetas/LeerEtiqueta.php';
 
                         } elseif ( $subRecurso == 'paginacion' && $int > 0 ) {
                             
-                            #require_once './Endpoints/Categorias/CategoriasPaginacion.php';
+                            require_once './Endpoints/Etiquetas/EtiquetasPaginacion.php';
 
                         } else {
 
@@ -186,6 +186,12 @@ class Respuesta {
                     
                     break;
 
+                    case 'etiquetas': 
+
+                        require_once './Endpoints/Etiquetas/CrearEtiqueta.php';
+                    
+                    break;
+
                 }
                 
             break;
@@ -206,6 +212,12 @@ class Respuesta {
 
                     break;
 
+                    case 'etiquetas':
+
+                        require_once('./Endpoints/Etiquetas/ActualizarEtiqueta.php');
+
+                    break;
+
                 }
                 
             break;
@@ -223,6 +235,12 @@ class Respuesta {
                     case 'categorias':
 
                         require_once('./Endpoints/Categorias/EliminarCategoria.php');
+
+                    break;
+
+                    case 'etiquetas':
+
+                        require_once('./Endpoints/Etiquetas/EliminarEtiqueta.php');
 
                     break;
 
