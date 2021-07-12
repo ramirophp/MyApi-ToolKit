@@ -6,7 +6,7 @@ html([
     'head' => [],
     'body' => [
         div("hello world.",['class' => 'myDiv']),
-        script()
+        script(null,['src' => './index.js'])
     ]
 ],[
     'html' => ['lang' => 'es'],

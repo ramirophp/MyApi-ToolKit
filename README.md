@@ -1,18 +1,5 @@
 # MyApi-ToolKit- LocalHost - PlayGround
 
-<h2>Todo List :</h2> 
-
-<ul>
-    <li>Implementar Leer atributos</li>
-    <li>Implementar Leer un atributo</li>
-    <li>Implementar Leer atributos formato paginacion</li>
-    <li>Implementar crear atributo</li>
-    <li>Implementar actualizar atributo</li>
-    <li>Implementar borrar atributo</li>
-</ul>
-
-<hr>
-
 <h2>El atributo on y, Modos de elementos</h2>
 
 <p>
