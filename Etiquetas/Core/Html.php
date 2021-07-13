@@ -252,7 +252,7 @@
 
     }
 
-    public function __construct ($type = '',$tag = '',$content = [],$attrs = [],$js=false,$on=false) {
+    public function __construct ($type = '',$tag = '',$content = [],$attrs = [],$js=false,$on=true) {
 
         $this->type($type);
 
@@ -417,7 +417,84 @@ function br ($on = true) {
     return $br->element();
 }
 
+function hr (array $set = [],$on = true) {
+    $hr = new Html('sc','hr',$set,false,$on);
+    return $hr->element();
+}
+
 function span ($in = null,array $set = [],$on = true) {
     $span = new Html('oc','span',$in,$set,false,$on);
     return $span->element();
+}
+
+function meta (array $set = [],$on = true) {
+    $link = new Html('sc','meta',$set,false,$on);
+    return $link->element();
+}
+
+function meta_tags (string $descripcion, array $palabrasClave, string $autor) {
+    /**
+     * <meta charset="UTF-8">
+     * <meta name="description" content="Free Web tutorials">
+     * <meta name="keywords" content="HTML, CSS, JavaScript">
+     * <meta name="author" content="John Doe">
+     * <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     */
+
+    $charset = meta(['charset' => 'UTF-8']);
+
+    $description = meta([
+        'name' => 'description',
+        'content' => $descripcion
+    ]);
+
+    $keywords = meta([
+        'name' => 'keywords',
+        'content' => implode(",",$palabrasClave)
+    ]);
+
+    $author = meta([
+        'name' => 'author',
+        'content' => $autor
+    ]);
+
+    $viewport = meta([
+        'name' => 'viewport',
+        'content' => 'width=device-width, initial-scale=1.0'
+    ]);
+
+    $httpEquiv = meta([
+        'http-equiv' => 'X-UA-Compatible',
+        'content' => 'ie=edge'
+    ]);
+
+    return implode("",[
+        $charset,
+        $description,
+        $keywords,
+        $author,
+        $viewport,
+        $httpEquiv
+    ]);
+
+}
+
+function h2 ($in = null,array $set = [],$on = true) {
+    $h2 = new Html('oc','h2',$in,$set,false,$on);
+    return $h2->element();
+}
+
+function pre ($in = null,array $set = [],$on = true) {
+    $pre = new Html('oc','pre',$in,$set,false,$on);
+    return $pre->element();
+}
+
+function section ($in = null,array $set = [],$on = true) {
+    $section = new Html('oc','section',$in,$set,false,$on);
+    return $section->element();
+}
+
+function button ($in = null,array $set = [],$on = true) {
+    $button = new Html('oc','button',$in,$set,false,$on);
+    return $button->element();
 }
