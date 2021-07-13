@@ -484,9 +484,19 @@ function h2 ($in = null,array $set = [],$on = true) {
     return $h2->element();
 }
 
+function h1 ($in = null,array $set = [],$on = true) {
+    $h1 = new Html('oc','h1',$in,$set,false,$on);
+    return $h1->element();
+}
+
 function pre ($in = null,array $set = [],$on = true) {
     $pre = new Html('oc','pre',$in,$set,false,$on);
     return $pre->element();
+}
+
+function p ($in = null,array $set = [],$on = true) {
+    $p = new Html('oc','p',$in,$set,false,$on);
+    return $p->element();
 }
 
 function section ($in = null,array $set = [],$on = true) {
@@ -497,4 +507,9 @@ function section ($in = null,array $set = [],$on = true) {
 function button ($in = null,array $set = [],$on = true) {
     $button = new Html('oc','button',$in,$set,false,$on);
     return $button->element();
+}
+
+function title ($in = null,$on = true) {
+    $title = new Html('oc','title',$in,[],false,$on);
+    return $title->element();
 }
