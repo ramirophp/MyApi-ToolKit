@@ -107,6 +107,19 @@ los atributos que ingrese se validen.
 
 <hr>
 
+<p>
+v1.4.2-js incluye un juego basico de blackjack<br>
+en el cual los valores que representan las cartas<br>
+que no son numericas son los siguientes :<br>
+a = 1, j = 11, q = 12 , k = 13 <br>
+entonces cuando obtengamos un 1 lo convertiremos a 11<br>
+y cuando obtengamos 11,12 o 13 lo convertiremos a 10<br>
+si quiere elegir entre 1 y 11 cuando obtenga un A <br>
+tendra que programar esa funcionalidad usted mismo(a)
+</p>
+
+<hr>
+
 <h2>LICENSE</h2>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">

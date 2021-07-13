@@ -1,0 +1,105 @@
+.body {
+    background-color: rgba(0, 128, 79, 0.808);
+}
+
+.content {
+    max-width: 500px;
+    height: auto;
+    margin: 15vh auto;
+    border: 1px solid rgba(255, 217, 0, 0.712);
+    text-align: center;
+    background-image: url("./imagenes/weed.jpg");
+    background-size: cover;
+    color:honeydew;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1,#message-el {
+    color: rgba(255, 255, 255, 0.726);
+    width: 90%;
+    text-align: left;
+    padding: 5px;
+    margin: 37px auto;
+    /*background-color: rgba(0, 0, 0, 0.185);*/
+    text-shadow: 2px 3px 2px goldenrod;
+}
+
+#message-el {
+    text-align: left;
+    width: auto;
+    margin-left: 25px;
+    color: indigo;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+h1 button, #newCard-el {
+    color: #016f32;
+    width: 100px;
+    /*background-color: rgba(218, 165, 32, 0.274);*/
+    border: none;
+    box-shadow: 2px 3px 2px goldenrod;
+}
+
+#newCard-el {
+    background-color: rgba(218, 165, 32, 0.589);
+    color: indigo;
+    padding: 5px;
+}
+
+h1 button:hover, #newCard-el:hover {
+    cursor: pointer;
+}
+
+h1 button:active, #newCard-el:active {
+    box-shadow: 1px 2px 1px goldenrod;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.726);
+    width: 90%;
+    text-align: center;
+    margin: 25px auto;
+    padding: 5px;
+    text-shadow: 2px 3px 2px goldenrod;
+}
+
+#cards-el-p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: rgba(0, 0, 0, 0.24);*/
+}
+
+#sum-el, #player-el {
+    text-align: center;
+    width: auto;
+    color: indigo;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#cards-el {
+    color: indigo;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
