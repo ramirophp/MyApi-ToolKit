@@ -42,11 +42,20 @@ html([
     'body' => [],   ----------> body tag attributes
     'js' => true,  ----------> switch for javascript
     'on' => true   ----------> online api connection switch
-],
-[
+],[
     'make' => false, -----> deploy option , change to true for make the html file
     'file' => 'path' -----> set the path and name where you want to place your html file
 ]);
+
+el parametro deploy fue pensado para crear el archivo .html necesario
+para cuando estemos trabajando con extensiones para google chrome
+por ejemplo, pero en caso de necesitar el source code en formato html u otro
+entonces esta opcion te sera muy util.
+
+revisa la ruta Etiquetas/Piezas/Extension
+para tener una idea de para que te prodria servir
+este argumento y tambien checa el archivo Paginas/Extension.php
+para que vea un ejemplo del uso de esta opcion de la funcion html();
 </pre>
 
 <hr>
