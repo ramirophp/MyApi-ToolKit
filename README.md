@@ -42,6 +42,10 @@ html([
     'body' => [],   ----------> body tag attributes
     'js' => true,  ----------> switch for javascript
     'on' => true   ----------> online api connection switch
+],
+[
+    'make' => false, -----> deploy option , change to true for make the html file
+    'file' => 'path' -----> set the path and name where you want to place your html file
 ]);
 </pre>
 
