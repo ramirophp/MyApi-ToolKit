@@ -363,6 +363,10 @@ function html (array $in = [
         'body' => [],
         'js' => true,
         'on' => true
+    ],
+    array $deploy = [
+        'make' => false,
+        'file' => './index.html'
     ]) {
 
     if(!validarEstructuras($in,$set)) {
@@ -384,6 +388,11 @@ function html (array $in = [
         $doctype->element(),
         $html->element()
     ]);
+
+    if ($deploy['make']) {
+        $archivo = fopen($deploy['file'], "w") or die("no se pudo abrir el archivo!");
+        fwrite($archivo, implode("",[$doctype->element(),$html->element()]));
+    }
 
 }
 
@@ -430,6 +439,11 @@ function span ($in = null,array $set = [],$on = true) {
 function meta (array $set = [],$on = true) {
     $link = new Html('sc','meta',$set,false,$on);
     return $link->element();
+}
+
+function input (array $set = [],$on = true) {
+    $input = new Html('sc','input',$set,false,$on);
+    return $input->element();
 }
 
 function meta_tags (string $descripcion, array $palabrasClave, string $autor) {
@@ -512,4 +526,9 @@ function button ($in = null,array $set = [],$on = true) {
 function title ($in = null,$on = true) {
     $title = new Html('oc','title',$in,[],false,$on);
     return $title->element();
+}
+
+function ul ($in = null,array $set = [],$on = true) {
+    $ul = new Html('oc','ul',$in,$set,false,$on);
+    return $ul->element();
 }
