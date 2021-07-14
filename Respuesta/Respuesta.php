@@ -321,6 +321,8 @@ class Respuesta {
     
                         Logger::logger("Esta solicitando $recurso tipo $subRecurso");
 
+                        die($recurso);
+
                         $this->getPostPutDelete ($recurso,$subRecurso);
     
                     } else {
