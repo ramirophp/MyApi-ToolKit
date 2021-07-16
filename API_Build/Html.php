@@ -47,10 +47,12 @@
             $tag = '!DOCTYPE';
         }
         $valid = false;
-        $tags = $this->get('http://localhost/API_Paginacion/routerSrvPg.php/tag');
-        if($tags === null) {
+        $tags = $this->get('http://localhost/MyApi-ToolKit/API_Paginacion/routerSrvPg.php/tag');
+        
+        if(array_key_exists('respuesta',$tags)) {
             header('Location: ../index.php');
         }
+
         for ($i = 0; $i < count($tags['tags']); $i++) {
             if ($tag === $tags['tags'][$i]['name']) {
                 $this->tag['tag'] = $tags['tags'][$i]['name'];
@@ -116,7 +118,7 @@
     }
 
     private function attrs (array $attrs) {
-        $validAttrs = $this->get('http://localhost/API_Paginacion/routerSrvPg.php/attr');
+        $validAttrs = $this->get('http://localhost/MyApi-ToolKit/API_Paginacion/routerSrvPg.php/attr');
         foreach ($attrs as $key => $value) {
             $key = htmlspecialchars($key);
             $value = htmlspecialchars($value);

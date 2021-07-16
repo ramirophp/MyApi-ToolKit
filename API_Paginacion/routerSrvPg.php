@@ -31,9 +31,18 @@ $uriTemporal = explode('*',$uriTemporal);//separamos la url
  * estamos asignando de lo contrario
  * nos quedamos con la ariable $url vacia
  */
+
+$isInt = trim($uriTemporal[count($uriTemporal)-1],'/');
+        
+if(preg_match('/^[0-9]{1,3}$/',$isInt)) {
+    $url = $uriTemporal[count($uriTemporal)-2].$uriTemporal[count($uriTemporal)-1];
+}else{
+    $url = $uriTemporal[count($uriTemporal)-1];
+}
+/*
 $url = (count($uriTemporal) === 5) ? $uriTemporal[3].$uriTemporal[4] : (
     (count($uriTemporal) === 4) ? $uriTemporal[3] : ''
-);
+);*/
 /**
  * Ya que tenemos el formato de url
  * que necesitamos , el siguiente paso es
@@ -59,7 +68,9 @@ if ( preg_match('/^[\/][a-z]{1,10}([\/][0-9]{1,3})?$/',$url) ) {
      * con la parte alfabetica y la parte numerica
      * limpiando los /
      */
-    $recurso = trim($uriTemporal[3],'/');
+    $recursos = explode('/',$url);
+
+    $recurso = trim($recursos[1],'/');
     /**
      * En este punto ya tenemos el recurso y 
      * el numero de pagina , pero aun no 
@@ -110,17 +121,18 @@ if ( preg_match('/^[\/][a-z]{1,10}([\/][0-9]{1,3})?$/',$url) ) {
             if($llenarTablas) {
 
                 $tags = ['!DOCTYPE','html','head','link','title','body','ul','li','a','h2','section','form',
-                'label','span','input','div','footer','i','script','br'];
+                'label','span','input','div','footer','i','script','br','h1','header','b','p','h6','h5',
+                'video','main'];
                 $attrs = ['html','rel','type','href','id','name','placeholder',
                 'for','value','class','src','defer','crossorigin','lang','title',
-                'action','method'];
+                'action','method','width','controls','autoplay','loop'];
             
                 for($i = 0; $i < count($tags); $i++){
                     $mysql = $pdo->prepare("INSERT INTO tags(name) VALUES('".$tags[$i]."')");
                     $mysql->execute();
                 }
             
-                for($i = 0; $i < count($tags); $i++){
+                for($i = 0; $i < count($attrs); $i++){
                     $mysql = $pdo->prepare("INSERT INTO attrs(name) VALUES('".$attrs[$i]."')");
                     $mysql->execute();
                 }

@@ -5,8 +5,8 @@
  * y dejarlo listo para su posterior 
  * uso
  */
-if(count($uriTemporal) === 5) {
-    $numeroPagina = (int)trim($uriTemporal[4],'/');
+if(count($recursos) === 3) {
+    $numeroPagina = (int)$recursos[2];
 }
 
 /**

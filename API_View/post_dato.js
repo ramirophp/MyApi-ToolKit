@@ -6,7 +6,7 @@ function addDato(e,recurso) {
     e.preventDefault();
 
     var peticion = new XMLHttpRequest();
-    peticion.open('POST',`http://localhost/API_Paginacion/routerSrvPg.php/${recurso}`);
+    peticion.open('POST',`http://localhost/MyApi-ToolKit/API_Paginacion/routerSrvPg.php/${recurso}`);
 
     var nombre = '';
     var tipoRc = '';
