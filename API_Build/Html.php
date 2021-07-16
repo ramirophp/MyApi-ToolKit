@@ -69,7 +69,7 @@
                 <span style='color:#FFA62F;'>Valid</span> 
                 <span style='color:#FFFF00;'>tag</span> 
                 <span style='color:#FFA62F;'>Please add it here 
-                <a href='http://localhost/API_Public/addTags.php' style='text-decoration:none;color:#FFFF00;'>
+                <a href='http://localhost/MyApi-ToolKit/API_Public/addTags.php' style='text-decoration:none;color:#FFFF00;'>
                 addTag ('".$tag."')</a></span> 
                 &#128113;
             </div>
@@ -107,7 +107,7 @@
                     <span style='color:#FFA62F;'>Not</span> 
                     <span style='color:#FFFF00;'>allowed</span> 
                     <span style='color:#FFA62F;'>Change the js arg to true<br>
-                    <a href='./APIHtml.php?JS=true' style='text-decoration:none;color:#FFFF00;'>
+                    <a href='./".basename($_SERVER["SCRIPT_FILENAME"])."?JS=true' style='text-decoration:none;color:#FFFF00;'>
                     Change It</a>
                     </span> 
                     &#128113;
@@ -145,7 +145,7 @@
                             <span style='color:#FFA62F;'>Not</span> 
                             <span style='color:#FFFF00;'>a valid</span> 
                             <span style='color:#FFA62F;'>Attribute add it here 
-                            <a href='http://localhost/API_Public/addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
+                            <a href='http://localhost/MyApi-ToolKit/API_Public/addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
                             addAttr ('".$tmpAttrs[$i]."')</a></span> 
                             &#128113;
                         </div>
@@ -172,7 +172,7 @@
                         <span style='color:#FFA62F;'>Not</span> 
                         <span style='color:#FFFF00;'>a valid</span> 
                         <span style='color:#FFA62F;'>Attribute add it here 
-                        <a href='http://localhost/API_Public/addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
+                        <a href='http://localhost/MyApi-ToolKit/API_Public/addAttrs.php' style='text-decoration:none;color:#FFFF00;'>
                         addAttr ('".$key."')</a></span> 
                         &#128113;
                     </div>
