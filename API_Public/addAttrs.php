@@ -75,7 +75,12 @@ html([
                 ]
             ]),['attrs'=>[
                 'href' => '#up'
-            ]])
+            ]]),
+            a('Back',[
+                'attrs' => [
+                    'href' => 'http://localhost'
+                ]
+            ])
         ]),
         script("var recurso = 'attrs';"),
         script(null,[

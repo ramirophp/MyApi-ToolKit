@@ -127,7 +127,13 @@ html([
                 ]
             ]),['attrs'=>[
                 'href' => '#up'
-            ]])
+            ]]),
+            a('Back',[
+                'attrs' => [
+                    'href' => 'http://localhost',
+                    'class' => 'back'
+                ]
+            ])
         ]),
         script(null,[
             'attrs' => [

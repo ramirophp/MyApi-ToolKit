@@ -84,6 +84,12 @@ html([
             input([
                 'type' => 'submit',
                 'value' => 'crear'
+            ]),
+            a('Back',[
+                'attrs' => [
+                    'href' => 'http://localhost',
+                    'class' => 'back'
+                ]
             ])
         ],[
             'js' => $activate,
